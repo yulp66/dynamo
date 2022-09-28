@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /public
+Disallow: /
+Disallow: /*.js?js_resource

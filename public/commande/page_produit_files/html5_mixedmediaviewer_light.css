@@ -1,0 +1,757 @@
+
+.s7tooltip {
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    border-radius: 3px 3px 3px 3px;
+    border-color:#999999;
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:11px;
+}
+
+.s7mixedmediaviewer {
+	width:100%;
+	height:100%;
+}
+
+.s7mixedmediaviewer .s7container[mode='fullscreen'] {
+	background-color: rgb(255, 255, 255);
+}
+
+.s7mixedmediaviewer .s7flyoutzoomview  {
+	border:none;
+}
+
+.s7mixedmediaviewer .s7flyoutzoomview  {
+	background-color:#FFFFFF;
+}
+
+.s7mixedmediaviewer .s7flyoutzoomview .s7highlight {
+	opacity:0;
+	filter:alpha(opacity = 0);
+}
+
+.s7mixedmediaviewer .s7flyoutzoomview .s7cursor {
+	opacity:0;
+	filter:alpha(opacity = 0);
+}
+
+.s7mixedmediaviewer .s7flyoutzoomview .s7overlay {
+	opacity:0;
+	filter:alpha(opacity = 0);
+}
+
+.s7mixedmediaviewer .s7flyoutzoomview .s7flyoutzoom {
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	border:none;
+	z-index:1;
+}
+.s7mixedmediaviewer .s7flyoutzoomview .s7tip {
+	bottom:100px;
+}
+.s7mixedmediaviewer .s7zoomview {
+	position: absolute;	
+	top: 0px;
+	left: 0px;
+	z-index:1;
+}
+
+/* IconEffect component*/
+.s7mixedmediaviewer .s7zoomview .s7iconeffect {
+    width:100px;
+    height:100px;
+    background-size:contain;
+}
+
+.s7mixedmediaviewer.s7mouseinput .s7zoomview .s7iconeffect[media-type='standard'] {background-image:url(/is/image/Scene7SharedAssets/IconEffect_zoom?scl=1&fmt=png-alpha);}
+.s7mixedmediaviewer.s7mouseinput .s7zoomview .s7iconeffect[media-type='multitouch'] {background-image:url(/is/image/Scene7SharedAssets/IconEffect_pinch?scl=1&fmt=png-alpha);}
+
+.s7mixedmediaviewer.s7touchinput .s7zoomview .s7iconeffect[media-type='standard'] {background-image:url(/is/image/Scene7SharedAssets/IconEffect_zoom?scl=1&fmt=png-alpha);}
+.s7mixedmediaviewer.s7touchinput .s7zoomview .s7iconeffect[media-type='multitouch'] {background-image:url(/is/image/Scene7SharedAssets/IconEffect_pinch?scl=1&fmt=png-alpha);}
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+    .s7mixedmediaviewer.s7touchinput .s7zoomview .s7iconeffect[media-type='standard'] {	background-image:url(/is/image/Scene7SharedAssets/IconEffect_zoom_2x?scl=1&fmt=png-alpha);	}
+    .s7mixedmediaviewer.s7mouseinput .s7zoomview .s7iconeffect[media-type='standard'] {	background-image:url(/is/image/Scene7SharedAssets/IconEffect_zoom_2x?scl=1&fmt=png-alpha);	}
+    .s7mixedmediaviewer.s7touchinput .s7zoomview .s7iconeffect[media-type='multitouch'] { background-image:url(/is/image/Scene7SharedAssets/IconEffect_pinch_2x?scl=1&fmt=png-alpha);}
+}
+
+/* SetIndicator - common styles */
+.s7mixedmediaviewer .s7setindicator {
+    position: absolute;
+    visibility:inherit;
+    z-index:1;
+}
+.s7mixedmediaviewer .s7setindicator .s7dot {
+	width:15px;
+	height:15px;
+	margin-left:2px;
+	margin-top:5px;
+	margin-right:2px;
+	margin-bottom:1px;
+	border-radius:12px;
+	background-color:#d5d3d3;
+}
+
+.s7mixedmediaviewer .s7setindicator .s7dot[state='selected'] {
+	background-color:#939393;
+}
+
+/**
+ * Buttons component  
+ */
+ 
+/*************************************************************************/
+/* ZoomInButton - common styles */
+.s7mixedmediaviewer .s7zoominbutton  {
+	position:absolute;
+	bottom: 20px;
+	background-size:contain;
+	z-index:1;
+ }
+
+/* ZoomInButton - desktop size and art */
+.s7mixedmediaviewer.s7mouseinput .s7zoominbutton  {
+    left: 20px;
+    width:28px;
+    height:28px;
+ }
+.s7mixedmediaviewer.s7mouseinput .s7zoominbutton[state='up'] { background-image:url(/is/image/Scene7SharedAssets/ZoomInButton_light_up?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7zoominbutton[state='over'] { background-image:url(/is/image/Scene7SharedAssets/ZoomInButton_light_over?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7zoominbutton[state='down'] { background-image:url(/is/image/Scene7SharedAssets/ZoomInButton_light_down?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7zoominbutton[state='disabled'] { background-image:url(/is/image/Scene7SharedAssets/ZoomInButton_light_disabled?scl=1&fmt=png-alpha); }
+
+/* ZoomInButton - touch device size and art */
+.s7mixedmediaviewer.s7touchinput .s7zoominbutton  {
+    left: 20px;
+    width:56px;
+    height:56px;
+}
+.s7mixedmediaviewer.s7touchinput .s7zoominbutton[state='up'] { background-image:url(/is/image/Scene7SharedAssets/ZoomInButton_light_up_touch?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7touchinput .s7zoominbutton[state='over'] { background-image:url(/is/image/Scene7SharedAssets/ZoomInButton_light_over_touch?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7touchinput .s7zoominbutton[state='down'] { background-image:url(/is/image/Scene7SharedAssets/ZoomInButton_light_down_touch?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7touchinput .s7zoominbutton[state='disabled'] { background-image:url(/is/image/Scene7SharedAssets/ZoomInButton_light_disabled_touch?scl=1&fmt=png-alpha); }
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+    .s7mixedmediaviewer.s7touchinput .s7zoominbutton[state='up'] { background-image:url(/is/image/Scene7SharedAssets/ZoomInButton_light_up_touch_2x?scl=1&fmt=png-alpha); }
+    .s7mixedmediaviewer.s7touchinput .s7zoominbutton[state='over'] { background-image:url(/is/image/Scene7SharedAssets/ZoomInButton_light_over_touch_2x?scl=1&fmt=png-alpha); }
+    .s7mixedmediaviewer.s7touchinput .s7zoominbutton[state='down'] { background-image:url(/is/image/Scene7SharedAssets/ZoomInButton_light_down_touch_2x?scl=1&fmt=png-alpha); }
+    .s7mixedmediaviewer.s7touchinput .s7zoominbutton[state='disabled'] { background-image:url(/is/image/Scene7SharedAssets/ZoomInButton_light_disabled_touch_2x?scl=1&fmt=png-alpha); }
+}
+
+/* ZoomInButton - hide on smartphone */
+.s7mixedmediaviewer.s7size_small.s7touchinput .s7zoominbutton  {
+    visibility:hidden;
+}
+
+/*************************************************************************/
+/* ZoomOutButton - common styles */
+.s7mixedmediaviewer .s7zoomoutbutton{
+	position:absolute;
+	bottom: 20px;
+    background-size:contain;
+    z-index:1;
+}
+
+/* ZoomOutButton - desktop size and art */
+.s7mixedmediaviewer.s7mouseinput .s7zoomoutbutton{
+	left: 50px;	
+	width:28px;
+	height:28px;
+ }
+.s7mixedmediaviewer.s7mouseinput .s7zoomoutbutton[state='up'] { background-image:url(/is/image/Scene7SharedAssets/ZoomOutButton_light_up?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7zoomoutbutton[state='over'] { background-image:url(/is/image/Scene7SharedAssets/ZoomOutButton_light_over?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7zoomoutbutton[state='down'] { background-image:url(/is/image/Scene7SharedAssets/ZoomOutButton_light_down?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7zoomoutbutton[state='disabled'] { background-image:url(/is/image/Scene7SharedAssets/ZoomOutButton_light_disabled?scl=1&fmt=png-alpha); }
+
+/* ZoomOutButton - touch device size and art */
+.s7mixedmediaviewer.s7touchinput .s7zoomoutbutton{
+    left: 77px;
+    width:56px;
+    height:56px;
+}
+.s7mixedmediaviewer.s7touchinput .s7zoomoutbutton[state='up'] { background-image:url(/is/image/Scene7SharedAssets/ZoomOutButton_light_up_touch?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7touchinput .s7zoomoutbutton[state='over'] { background-image:url(/is/image/Scene7SharedAssets/ZoomOutButton_light_over_touch?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7touchinput .s7zoomoutbutton[state='down'] { background-image:url(/is/image/Scene7SharedAssets/ZoomOutButton_light_down_touch?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7touchinput .s7zoomoutbutton[state='disabled'] { background-image:url(/is/image/Scene7SharedAssets/ZoomOutButton_light_disabled_touch?scl=1&fmt=png-alpha); }
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5)	{
+    .s7mixedmediaviewer.s7touchinput .s7zoomoutbutton[state='up'] { background-image:url(/is/image/Scene7SharedAssets/ZoomOutButton_light_up_touch_2x?scl=1&fmt=png-alpha); }
+    .s7mixedmediaviewer.s7touchinput .s7zoomoutbutton[state='over'] { background-image:url(/is/image/Scene7SharedAssets/ZoomOutButton_light_over_touch_2x?scl=1&fmt=png-alpha); }
+    .s7mixedmediaviewer.s7touchinput .s7zoomoutbutton[state='down'] { background-image:url(/is/image/Scene7SharedAssets/ZoomOutButton_light_down_touch_2x?scl=1&fmt=png-alpha); }
+    .s7mixedmediaviewer.s7touchinput .s7zoomoutbutton[state='disabled'] { background-image:url(/is/image/Scene7SharedAssets/ZoomOutButton_light_disabled_touch_2x?scl=1&fmt=png-alpha); }
+}
+
+/* ZoomOutButton - hide on smartphone */
+.s7mixedmediaviewer.s7size_small.s7touchinput .s7zoomoutbutton{
+    visibility:hidden;
+}
+
+/*************************************************************************/
+/* ZoomResetButton - common styles */
+.s7mixedmediaviewer .s7zoomresetbutton {
+	position:absolute;
+	bottom: 20px;
+    background-size:contain;
+    z-index:1;
+}
+
+/* ZoomResetButton - desktop size and art */
+.s7mixedmediaviewer.s7mouseinput .s7zoomresetbutton {
+	left: 80px;
+	width:28px;
+	height:28px;
+ }
+.s7mixedmediaviewer.s7mouseinput .s7zoomresetbutton[state='up'] { background-image:url(/is/image/Scene7SharedAssets/ZoomResetButton_light_up?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7zoomresetbutton[state='over'] { background-image:url(/is/image/Scene7SharedAssets/ZoomResetButton_light_over?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7zoomresetbutton[state='down'] { background-image:url(/is/image/Scene7SharedAssets/ZoomResetButton_light_down?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7zoomresetbutton[state='disabled'] { background-image:url(/is/image/Scene7SharedAssets/ZoomResetButton_light_disabled?scl=1&fmt=png-alpha); }
+
+/* ZoomResetButton - touch device size and art */
+.s7mixedmediaviewer.s7touchinput .s7zoomresetbutton {
+    left: 135px;
+    width:56px;
+    height:56px;
+}
+.s7mixedmediaviewer.s7touchinput .s7zoomresetbutton[state='up'] { background-image:url(/is/image/Scene7SharedAssets/ZoomResetButton_light_up_touch?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7touchinput .s7zoomresetbutton[state='over'] { background-image:url(/is/image/Scene7SharedAssets/ZoomResetButton_light_over_touch?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7touchinput .s7zoomresetbutton[state='down'] { background-image:url(/is/image/Scene7SharedAssets/ZoomResetButton_light_down_touch?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7touchinput .s7zoomresetbutton[state='disabled'] { background-image:url(/is/image/Scene7SharedAssets/ZoomResetButton_light_disabled_touch?scl=1&fmt=png-alpha); }
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+    .s7mixedmediaviewer.s7touchinput .s7zoomresetbutton[state='up'] { background-image:url(/is/image/Scene7SharedAssets/ZoomResetButton_light_up_touch_2x?scl=1&fmt=png-alpha); }
+    .s7mixedmediaviewer.s7touchinput .s7zoomresetbutton[state='over'] { background-image:url(/is/image/Scene7SharedAssets/ZoomResetButton_light_over_touch_2x?scl=1&fmt=png-alpha); }
+    .s7mixedmediaviewer.s7touchinput .s7zoomresetbutton[state='down'] { background-image:url(/is/image/Scene7SharedAssets/ZoomResetButton_light_down_touch_2x?scl=1&fmt=png-alpha); }
+    .s7mixedmediaviewer.s7touchinput .s7zoomresetbutton[state='disabled'] { background-image:url(/is/image/Scene7SharedAssets/ZoomResetButton_light_disabled_touch_2x?scl=1&fmt=png-alpha); }
+}
+
+/* ZoomResetButton - center on smartphones */
+.s7mixedmediaviewer.s7size_small.s7touchinput .s7zoomresetbutton {
+    left:50%;
+    bottom: 20px;
+}
+.s7mixedmediaviewer.s7size_small.s7touchinput .s7zoomresetbutton[state='disabled'] {
+    visibility:hidden;
+}
+.s7mixedmediaviewer.s7size_small.s7touchinput .s7zoomresetbutton {
+    margin-left: -28px;
+}
+
+/*************************************************************************/
+/* FullScreenButton - common styles */
+.s7mixedmediaviewer .s7fullscreenbutton{
+    position:absolute;
+    bottom: 20px;
+    background-size:contain;
+    z-index:1;
+}
+
+/* FullScreenButton - desktop size and art */
+.s7mixedmediaviewer.s7mouseinput .s7fullscreenbutton{
+    right: 20px;
+    width:28px;
+    height:28px;
+}
+.s7mixedmediaviewer.s7mouseinput .s7fullscreenbutton[selected='true'][state='up'] { background-image:url(/is/image/Scene7SharedAssets/MinScreenButton_light_up?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7fullscreenbutton[selected='true'][state='over'] { background-image:url(/is/image/Scene7SharedAssets/MinScreenButton_light_over?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7fullscreenbutton[selected='true'][state='down'] { background-image:url(/is/image/Scene7SharedAssets/MinScreenButton_light_down?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7fullscreenbutton[selected='true'][state='disabled'] { background-image:url(/is/image/Scene7SharedAssets/MinScreenButton_light_disabled?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7fullscreenbutton[selected='false'][state='up'] { background-image:url(/is/image/Scene7SharedAssets/FullScreenButton_light_up?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7fullscreenbutton[selected='false'][state='over'] { background-image:url(/is/image/Scene7SharedAssets/FullScreenButton_light_over?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7fullscreenbutton[selected='false'][state='down'] { background-image:url(/is/image/Scene7SharedAssets/FullScreenButton_light_down?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7fullscreenbutton[selected='false'][state='disabled'] { background-image:url(/is/image/Scene7SharedAssets/FullScreenButton_light_disabled?scl=1&fmt=png-alpha); }
+
+/* FullScreenButton - touch device size and art */
+.s7mixedmediaviewer.s7touchinput .s7fullscreenbutton{
+    right: 20px;
+    width:56px;
+    height:56px;
+}
+.s7mixedmediaviewer .s7fullscreenbutton[selected='true'][state='up'] { background-image:url(/is/image/Scene7SharedAssets/MinScreenButton_light_up_touch?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7fullscreenbutton[selected='true'][state='over'] { background-image:url(/is/image/Scene7SharedAssets/MinScreenButton_light_over_touch?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7fullscreenbutton[selected='true'][state='down'] { background-image:url(/is/image/Scene7SharedAssets/MinScreenButton_light_down_touch?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7fullscreenbutton[selected='true'][state='disabled'] { background-image:url(/is/image/Scene7SharedAssets/MinScreenButton_light_disabled_touch?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7fullscreenbutton[selected='false'][state='up'] { background-image:url(/is/image/Scene7SharedAssets/FullScreenButton_light_up_touch?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7fullscreenbutton[selected='false'][state='over'] { background-image:url(/is/image/Scene7SharedAssets/FullScreenButton_light_over_touch?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7fullscreenbutton[selected='false'][state='down'] { background-image:url(/is/image/Scene7SharedAssets/FullScreenButton_light_down_touch?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7fullscreenbutton[selected='false'][state='disabled'] { background-image:url(/is/image/Scene7SharedAssets/FullScreenButton_light_disabled_touch?scl=1&fmt=png-alpha); }
+@media only screen and (-webkit-min-device-pixel-ratio:1.5)
+{
+    .s7mixedmediaviewer .s7fullscreenbutton[selected='true'][state='up'] { background-image:url(/is/image/Scene7SharedAssets/MinScreenButton_light_up_touch_2x?scl=1&fmt=png-alpha); }
+    .s7mixedmediaviewer .s7fullscreenbutton[selected='true'][state='over'] { background-image:url(/is/image/Scene7SharedAssets/MinScreenButton_light_over_touch_2x?scl=1&fmt=png-alpha); }
+    .s7mixedmediaviewer .s7fullscreenbutton[selected='true'][state='down'] { background-image:url(/is/image/Scene7SharedAssets/MinScreenButton_light_down_touch_2x?scl=1&fmt=png-alpha); }
+    .s7mixedmediaviewer .s7fullscreenbutton[selected='true'][state='disabled'] { background-image:url(/is/image/Scene7SharedAssets/MinScreenButton_light_disabled_touch_2x?scl=1&fmt=png-alpha); }
+    .s7mixedmediaviewer .s7fullscreenbutton[selected='false'][state='up'] { background-image:url(/is/image/Scene7SharedAssets/FullScreenButton_light_up_touch_2x?scl=1&fmt=png-alpha); }
+    .s7mixedmediaviewer .s7fullscreenbutton[selected='false'][state='over'] { background-image:url(/is/image/Scene7SharedAssets/FullScreenButton_light_over_touch_2x?scl=1&fmt=png-alpha); }
+    .s7mixedmediaviewer .s7fullscreenbutton[selected='false'][state='down'] { background-image:url(/is/image/Scene7SharedAssets/FullScreenButton_light_down_touch_2x?scl=1&fmt=png-alpha); }
+    .s7mixedmediaviewer .s7fullscreenbutton[selected='false'][state='disabled'] { background-image:url(/is/image/Scene7SharedAssets/FullScreenButton_light_disabled_touch_2x?scl=1&fmt=png-alpha); }
+}
+
+/*************************************************************************/
+/* CloseButton - common styles */
+.s7mixedmediaviewer .s7closebutton{
+    position:absolute;
+    top: 20px;
+    right: 20px;
+    background-size:contain;
+    z-index:1;
+}
+
+/* CloseButton - desktop size and art  */
+.s7mixedmediaviewer.s7mouseinput .s7closebutton{
+    width:28px;
+    height:28px;
+}
+.s7mixedmediaviewer.s7mouseinput .s7closebutton[state='up'] { background-image:url(/is/image/Scene7SharedAssets/CloseButton_light_up?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7closebutton[state='over'] { background-image:url(/is/image/Scene7SharedAssets/CloseButton_light_over?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7closebutton[state='down'] { background-image:url(/is/image/Scene7SharedAssets/CloseButton_light_down?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7closebutton[state='disabled'] { background-image:url(/is/image/Scene7SharedAssets/CloseButton_light_disabled?scl=1&fmt=png-alpha); }
+/* CloseButton - touch device size and art */
+.s7mixedmediaviewer.s7touchinput .s7closebutton{
+    width:56px;
+    height:56px;
+}
+.s7mixedmediaviewer.s7touchinput .s7closebutton[state='up'] { background-image:url(/is/image/Scene7SharedAssets/CloseButton_light_up_touch?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7touchinput .s7closebutton[state='over'] { background-image:url(/is/image/Scene7SharedAssets/CloseButton_light_over_touch?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7touchinput .s7closebutton[state='down'] { background-image:url(/is/image/Scene7SharedAssets/CloseButton_light_down_touch?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7touchinput .s7closebutton[state='disabled'] { background-image:url(/is/image/Scene7SharedAssets/CloseButton_light_disabled_touch?scl=1&fmt=png-alpha); }
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+    .s7mixedmediaviewer.s7touchinput .s7closebutton[state='up'] { background-image:url(/is/image/Scene7SharedAssets/CloseButton_light_up_touch_2x?scl=1&fmt=png-alpha); }
+    .s7mixedmediaviewer.s7touchinput .s7closebutton[state='over'] { background-image:url(/is/image/Scene7SharedAssets/CloseButton_light_over_touch_2x?scl=1&fmt=png-alpha); }
+    .s7mixedmediaviewer.s7touchinput .s7closebutton[state='down'] { background-image:url(/is/image/Scene7SharedAssets/CloseButton_light_down_touch_2x?scl=1&fmt=png-alpha); }
+    .s7mixedmediaviewer.s7touchinput .s7closebutton[state='disabled'] { background-image:url(/is/image/Scene7SharedAssets/CloseButton_light_disabled_touch_2x?scl=1&fmt=png-alpha); }
+}
+
+/*************************************************************************/
+/* IconEffect component */
+.s7mixedmediaviewer .s7spinview .s7iconeffect{
+	width:100px;
+	height:100px;
+	background-size:contain;
+ }
+.s7mixedmediaviewer.s7mouseinput .s7spinview .s7iconeffect[state='spin_1D'] { background-image:url(/is/image/Scene7SharedAssets/IconEffect_spin_up?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7spinview .s7iconeffect[state='spin_2D'] { background-image:url(/is/image/Scene7SharedAssets/IconEffect_spin3d_up?scl=1&fmt=png-alpha); }
+
+.s7mixedmediaviewer.s7touchinput .s7spinview .s7iconeffect[state='spin_1D'] { background-image:url(/is/image/Scene7SharedAssets/IconEffect_spin_up?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7touchinput .s7spinview .s7iconeffect[state='spin_2D'] { background-image:url(/is/image/Scene7SharedAssets/IconEffect_spin3d_up?scl=1&fmt=png-alpha); }
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+    .s7mixedmediaviewer.s7touchinput .s7spinview .s7iconeffect[state='spin_1D'] { background-image:url(/is/image/Scene7SharedAssets/IconEffect_spin_up_touch_2x?scl=1&fmt=png-alpha); }
+    .s7mixedmediaviewer.s7touchinput .s7spinview .s7iconeffect[state='spin_2D'] { background-image:url(/is/image/Scene7SharedAssets/IconEffect_spin3d_up_touch_2x?scl=1&fmt=png-alpha); }
+}
+
+/*************************************************************************/
+/* SpinButtons component */
+.s7mixedmediaviewer .s7spinbuttons {
+	left:50%;
+	width:84px;
+	margin:-42px;
+ }
+
+/* spin buttons container - - hide on tablets and smartphones */
+.s7mixedmediaviewer.s7touchinput .s7spinbuttons {
+	visibility: hidden;
+}
+
+/*************************************************************************/
+/* SpinLeftButton component */
+.s7mixedmediaviewer .s7spinbuttons .s7panleftbutton {
+	position:absolute;
+	left: 0px;
+	top:0px;
+	width:28px;
+	height:28px;
+	background-size:contain;
+	z-index:1;
+ }
+.s7mixedmediaviewer.s7mouseinput .s7spinbuttons .s7panleftbutton[state='up'] { background-image:url(/is/image/Scene7SharedAssets/SpinLeftButton_light_up?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7spinbuttons .s7panleftbutton[state='over'] { background-image:url(/is/image/Scene7SharedAssets/SpinLeftButton_light_over?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7spinbuttons .s7panleftbutton[state='down'] { background-image:url(/is/image/Scene7SharedAssets/SpinLeftButton_light_down?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7spinbuttons .s7panleftbutton[state='disabled'] { background-image:url(/is/image/Scene7SharedAssets/SpinLeftButton_light_disabled?scl=1&fmt=png-alpha); }
+
+/*************************************************************************/
+/* SpinRightButton component*/
+.s7mixedmediaviewer .s7spinbuttons .s7panrightbutton {
+	position:absolute;
+	right: 0px;
+	top:0px;
+	width:28px;
+	height:28px;
+	background-size:contain;
+	z-index:1;
+ }
+.s7mixedmediaviewer.s7mouseinput .s7spinbuttons .s7panrightbutton[state='up'] { background-image:url(/is/image/Scene7SharedAssets/SpinRightButton_light_up?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7spinbuttons .s7panrightbutton[state='over'] { background-image:url(/is/image/Scene7SharedAssets/SpinRightButton_light_over?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7spinbuttons .s7panrightbutton[state='down'] { background-image:url(/is/image/Scene7SharedAssets/SpinRightButton_light_down?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7spinbuttons .s7panrightbutton[state='disabled'] { background-image:url(/is/image/Scene7SharedAssets/SpinRightButton_light_disabled?scl=1&fmt=png-alpha); }
+
+/*************************************************************************/
+/* ColorSwatches component */
+.s7mixedmediaviewer .s7colorswatches .s7swatches {
+    position:absolute;
+    bottom: 0px;
+    left: 0px;
+    background: transparent;
+    z-index:1;
+}
+.s7mixedmediaviewer.s7mouseinput .s7colorswatches .s7swatches {
+	height: 44px;
+	width: 280px;
+}
+.s7mixedmediaviewer.s7touchinput .s7colorswatches .s7swatches {
+    height: 68px;
+    width: 140px;
+}
+.s7mixedmediaviewer.s7touchinput.s7size_large .s7colorswatches .s7swatches {
+	height: 44px;
+	width: 280px;
+}
+.s7mixedmediaviewer.s7size_small .s7colorswatches .s7swatches{
+    bottom: -10px;
+}
+
+.s7mixedmediaviewer .s7colorswatches .s7swatches .s7thumb {
+    background-color : #ffffff;
+    border: 1px solid #dddddd;
+    width: 28px;
+    height: 28px;
+}
+
+.s7mixedmediaviewer .s7colorswatches .s7swatches .s7thumb[state="default"] {
+	border: 1px solid #dddddd;
+}
+
+.s7mixedmediaviewer .s7colorswatches .s7swatches .s7thumb[state="selected"] {
+	border: 1px solid #666666;
+}
+
+
+.s7mixedmediaviewer.s7size_small .s7colorswatches .s7swatches .s7thumb {
+    width: 10px;
+    height: 10px;
+}
+
+/* ColorSwatches scroll left button */
+.s7mixedmediaviewer.s7mouseinput .s7colorswatches .s7swatches .s7scrollleftbutton {
+	background-size: auto;
+	width: 28px;
+	height: 28px;
+}
+.s7mixedmediaviewer.s7mouseinput .s7colorswatches .s7swatches .s7scrollleftbutton[state="up"]{ background-image:url(/is/image/Scene7SharedAssets/ScrollLeftButton_light_up?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7colorswatches .s7swatches .s7scrollleftbutton[state="over"]{ background-image:url(/is/image/Scene7SharedAssets/ScrollLeftButton_light_over?scl=1&fmt=png-alpha);}
+.s7mixedmediaviewer.s7mouseinput .s7colorswatches .s7swatches .s7scrollleftbutton[state="down"]{ background-image:url(/is/image/Scene7SharedAssets/ScrollLeftButton_light_down?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7colorswatches .s7swatches .s7scrollleftbutton[state="disabled"]{ background-image:url(/is/image/Scene7SharedAssets/ScrollLeftButton_light_disabled?scl=1&fmt=png-alpha); }
+
+/* ColorSwatches scroll right button */
+.s7mixedmediaviewer.s7mouseinput .s7colorswatches .s7swatches .s7scrollrightbutton {
+	background-size: auto;
+	width: 28px;
+	height: 28px;
+}
+.s7mixedmediaviewer.s7mouseinput .s7colorswatches .s7swatches .s7scrollrightbutton[state="up"]{ background-image:url(/is/image/Scene7SharedAssets/ScrollRightButton_light_up?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7colorswatches .s7swatches .s7scrollrightbutton[state="over"]{ background-image:url(/is/image/Scene7SharedAssets/ScrollRightButton_light_over?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7colorswatches .s7swatches .s7scrollrightbutton[state="down"]{ background-image:url(/is/image/Scene7SharedAssets/ScrollRightButton_light_down?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer.s7mouseinput .s7colorswatches .s7swatches .s7scrollrightbutton[state="disabled"]{ background-image:url(/is/image/Scene7SharedAssets/ScrollRightButton_light_disabled?scl=1&fmt=png-alpha); }
+
+.s7mixedmediaviewer.s7mouseinput .s7colorswatches .s7swatches .s7thumbcell{
+	margin: 4px;
+}
+.s7mixedmediaviewer.s7touchinput .s7colorswatches .s7swatches .s7thumbcell{
+    margin: 5px;
+}
+
+/*************************************************************************/
+/* Swatches component */
+ .s7mixedmediaviewer .s7swatches {
+	position:absolute;
+	bottom: 0px;
+	left: 0px; 
+	height: 96px;
+	background: transparent; 
+	z-index:1;
+}
+.s7mixedmediaviewer .s7swatches .s7thumb { 
+	width: 56px;
+	height: 56px;
+	background-color : #ffffff;
+	border: 1px solid #dddddd;
+}
+.s7mixedmediaviewer .s7swatches .s7thumb[state="default"] {
+	border: 1px solid #dddddd;
+}
+.s7mixedmediaviewer .s7swatches .s7thumb[state="selected"] {
+	border: 1px solid #666666;
+}
+
+/* Swatches scroll left button */
+.s7mixedmediaviewer .s7swatches .s7scrollleftbutton {
+	background-size: auto;
+	width: 56px;
+	height: 56px;
+}
+.s7mixedmediaviewer .s7swatches .s7scrollleftbutton[state="up"]{ background-image:url(/is/image/Scene7SharedAssets/ScrollLeftButton_light_up?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7swatches .s7scrollleftbutton[state="over"]{ background-image:url(/is/image/Scene7SharedAssets/ScrollLeftButton_light_over?scl=1&fmt=png-alpha);}
+.s7mixedmediaviewer .s7swatches .s7scrollleftbutton[state="down"]{ background-image:url(/is/image/Scene7SharedAssets/ScrollLeftButton_light_down?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7swatches .s7scrollleftbutton[state="disabled"]{ background-image:url(/is/image/Scene7SharedAssets/ScrollLeftButton_light_disabled?scl=1&fmt=png-alpha); }
+
+/* Swatches scroll right button */
+.s7mixedmediaviewer .s7swatches .s7scrollrightbutton {
+	background-size: auto;
+	width: 56px;
+	height: 56px;
+}
+.s7mixedmediaviewer .s7swatches .s7scrollrightbutton[state="up"]{ background-image:url(/is/image/Scene7SharedAssets/ScrollRightButton_light_up?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7swatches .s7scrollrightbutton[state="over"]{ background-image:url(/is/image/Scene7SharedAssets/ScrollRightButton_light_over?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7swatches .s7scrollrightbutton[state="down"]{ background-image:url(/is/image/Scene7SharedAssets/ScrollRightButton_light_down?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7swatches .s7scrollrightbutton[state="disabled"]{ background-image:url(/is/image/Scene7SharedAssets/ScrollRightButton_light_disabled?scl=1&fmt=png-alpha); }
+
+.s7mixedmediaviewer .s7swatches .s7thumb .s7thumboverlay[type="image"] {
+}
+.s7mixedmediaviewer .s7swatches .s7thumb .s7thumboverlay[type="swatchset"] {
+	background-image: url(/is/image/Scene7SharedAssets/ThumbOverlaySwatchSet?scl=1&fmt=png-alpha); 
+}
+.s7mixedmediaviewer .s7swatches .s7thumb .s7thumboverlay[type="spinset"] {
+	background-image: url(/is/image/Scene7SharedAssets/ThumbOverlaySpinSet?scl=1&fmt=png-alpha); 
+}
+.s7mixedmediaviewer .s7swatches .s7thumb .s7thumboverlay[type="video"] {
+	background-image: url(/is/image/Scene7SharedAssets/ThumbOverlayVideo?scl=1&fmt=png-alpha); 
+}
+
+/*************************************************************************/
+
+/* VideoPlayer component*/
+.s7mixedmediaviewer .s7videoplayer {
+	position: absolute;	
+	top: 0px;
+	left: 0px;
+	width: 600px;
+	height: 400px;
+}
+
+/* ControlBar component */
+.s7mixedmediaviewer .s7controlbar {
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	height: 36px;
+	background-color: rgb(0, 0, 0);/*whithout alpha*/
+	background-color: rgba(0, 0, 0, 0.75);
+}
+
+/*************************************************************************/
+/* PlayPauseButton component */
+.s7mixedmediaviewer .s7controlbar .s7playpausebutton {
+	position:absolute;
+	top:4px;
+	left:4px;
+	width:28px;
+	height:28px;
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position:center;
+ }
+.s7mixedmediaviewer .s7controlbar .s7playpausebutton[selected='true'][state='up'] { background-image:url(/is/image/Scene7SharedAssets/PlayButton_up?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7controlbar .s7playpausebutton[selected='true'][state='over'] { background-image:url(/is/image/Scene7SharedAssets/PlayButton_over?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7controlbar .s7playpausebutton[selected='true'][state='down'] { background-image:url(/is/image/Scene7SharedAssets/PlayButton_down?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7controlbar .s7playpausebutton[selected='true'][state='disabled'] { background-image:url(/is/image/Scene7SharedAssets/PlayButton_disabled?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7controlbar .s7playpausebutton[selected='false'][state='up'] { background-image:url(/is/image/Scene7SharedAssets/PauseButton_up?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7controlbar .s7playpausebutton[selected='false'][state='over'] { background-image:url(/is/image/Scene7SharedAssets/PauseButton_over?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7controlbar .s7playpausebutton[selected='false'][state='down'] { background-image:url(/is/image/Scene7SharedAssets/PauseButton_down?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7controlbar .s7playpausebutton[selected='false'][state='disabled'] { background-image:url(/is/image/Scene7SharedAssets/PauseButton_disabled?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7controlbar .s7playpausebutton[selected='true'][replay='true'][state='up'] {background-image:url(/is/image/Scene7SharedAssets/ReplayButton_up?scl=1&fmt=png-alpha);}
+.s7mixedmediaviewer .s7controlbar .s7playpausebutton[selected='true'][replay='true'][state='over'] {background-image:url(/is/image/Scene7SharedAssets/ReplayButton_over?scl=1&fmt=png-alpha);}
+.s7mixedmediaviewer .s7controlbar .s7playpausebutton[selected='true'][replay='true'][state='down'] {background-image:url(/is/image/Scene7SharedAssets/ReplayButton_down?scl=1&fmt=png-alpha);}
+.s7mixedmediaviewer .s7controlbar .s7playpausebutton[selected='true'][replay='true'][state='disabled'] {background-image:url(/is/image/Scene7SharedAssets/ReplayButton_disabled?scl=1&fmt=png-alpha);}
+
+/*************************************************************************/
+/* VideoScrubber component*/
+.s7mixedmediaviewer .s7controlbar .s7videoscrubber  {
+	position:absolute;
+	top:14px;
+	left:40px;
+	width:340px;
+	height:8px;
+ }
+.s7mixedmediaviewer .s7controlbar .s7videoscrubber .s7videotime {
+	position:absolute;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+	width:58px;
+	/*height:29px; Make the height taller than the image so it floats above the scrubber knob by a few px*/
+	height:35px;
+	padding:0px;
+	background-image:url(/is/image/Scene7SharedAssets/VideoScrubberTime?scl=1&fmt=png-alpha);
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position:top;
+	align:center;
+	text-align:center;
+	vertical-align:middle;
+	line-height:24px;		/* centers the text vertically in the bubble */
+	color:#ffffff;
+ }
+.s7mixedmediaviewer .s7controlbar .s7videoscrubber .s7track {
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:8px;
+	background-color:#555555;
+ }
+.s7mixedmediaviewer .s7controlbar .s7videoscrubber .s7trackloaded {
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:8px;
+	background-color:#666666;
+ }
+.s7mixedmediaviewer .s7controlbar .s7videoscrubber .s7trackplayed {
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:8px;
+	background-color:#999999;
+ }
+.s7mixedmediaviewer .s7controlbar .s7videoscrubber .s7knob {
+	position:absolute;
+	width:14px;
+	height:24px;
+	top:-8px;
+	left:-3px;
+	background-image:url(/is/image/Scene7SharedAssets/VideoScrubberKnob?scl=1&fmt=png-alpha);
+}
+
+/*************************************************************************/
+/* VideoTime component*/
+.s7mixedmediaviewer .s7controlbar .s7videotime {
+	position:absolute;
+	top:8px;
+	right:98px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+	color:#999999;
+	line-height: normal;		
+	/* Need to add an explicit width to enable scrubber resizing due to getComputedStyle not working in IE8 (IE uses currentStyle, which returns "auto" and breaks our layout math) */
+	/* Info on this hack here: http://webdesignerwall.com/tutorials/css-specific-for-internet-explorer */
+	width:60px\9;
+}
+
+/* MutableVolume component*/
+.s7mixedmediaviewer .s7controlbar .s7mutablevolume {
+	position:absolute;
+	top:4px;
+	right:35px;
+	width:30px;
+	height:28px;
+ }
+.s7mixedmediaviewer .s7controlbar .s7mutablevolume .s7mutebutton {
+	position:absolute;
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position:center;
+ }
+.s7mixedmediaviewer .s7controlbar .s7mutablevolume .s7mutebutton[selected='true'][state='up'] { background-image:url(/is/image/Scene7SharedAssets/VolumeMute_up?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7controlbar .s7mutablevolume .s7mutebutton[selected='true'][state='over'] { background-image:url(/is/image/Scene7SharedAssets/VolumeMute_over?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7controlbar .s7mutablevolume .s7mutebutton[selected='true'][state='down'] { background-image:url(/is/image/Scene7SharedAssets/VolumeMute_down?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7controlbar .s7mutablevolume .s7mutebutton[selected='true'][state='disabled'] { background-image:url(/is/image/Scene7SharedAssets/VolumeMute_disabled?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7controlbar .s7mutablevolume .s7mutebutton[selected='false'][state='up'] { background-image:url(/is/image/Scene7SharedAssets/VolumeFull_up?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7controlbar .s7mutablevolume .s7mutebutton[selected='false'][state='over'] { background-image:url(/is/image/Scene7SharedAssets/VolumeFull_over?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7controlbar .s7mutablevolume .s7mutebutton[selected='false'][state='down'] { background-image:url(/is/image/Scene7SharedAssets/VolumeFull_down?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7controlbar .s7mutablevolume .s7mutebutton[selected='false'][state='disabled'] { background-image:url(/is/image/Scene7SharedAssets/VolumeFull_disabled?scl=1&fmt=png-alpha); }
+
+.s7mixedmediaviewer .s7controlbar .s7mutablevolume .s7verticalvolume {
+	position:absolute;
+	width:30px;
+	height:83px;
+	left:0px;
+	background-color:#dddddd;
+ }
+.s7mixedmediaviewer .s7controlbar .s7mutablevolume .s7verticalvolume .s7track {
+	position:absolute;
+	top:11px;
+	left:11px;
+	width:8px;
+	height:61px;
+	background-color:#666666;
+ }
+.s7mixedmediaviewer .s7controlbar .s7mutablevolume .s7verticalvolume .s7filledtrack {
+	position:absolute;
+	/*top:11px;
+	left:11px;
+	*/width:8px;
+	height:61px;
+	background-color:#ababab;
+ }
+.s7mixedmediaviewer .s7controlbar .s7mutablevolume .s7verticalvolume .s7knob {
+	position:absolute;
+	width:14px;
+	height:8px;
+	top:11px;
+	left:8px;
+	background-image:url(/is/image/Scene7SharedAssets/VolumeKnob?scl=1&fmt=png-alpha);
+ }	
+
+/* FullScreenButton component*/
+.s7mixedmediaviewer .s7controlbar .s7fullscreenbutton {
+	position:absolute;
+	top:4px;
+	right:5px;
+	width:28px;
+	height:28px;
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position:center;
+ }
+.s7mixedmediaviewer .s7controlbar .s7fullscreenbutton[selected='true'][state='up'] { background-image:url(/is/image/Scene7SharedAssets/MinScreenButton_up?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7controlbar .s7fullscreenbutton[selected='true'][state='over'] { background-image:url(/is/image/Scene7SharedAssets/MinScreenButton_over?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7controlbar .s7fullscreenbutton[selected='true'][state='down'] { background-image:url(/is/image/Scene7SharedAssets/MinScreenButton_down?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7controlbar .s7fullscreenbutton[selected='true'][state='disabled'] { background-image:url(/is/image/Scene7SharedAssets/MinScreenButton_disabled?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7controlbar .s7fullscreenbutton[selected='false'][state='up'] { background-image:url(/is/image/Scene7SharedAssets/FullScreenButton_up?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7controlbar .s7fullscreenbutton[selected='false'][state='over'] { background-image:url(/is/image/Scene7SharedAssets/FullScreenButton_over?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7controlbar .s7fullscreenbutton[selected='false'][state='down'] { background-image:url(/is/image/Scene7SharedAssets/FullScreenButton_down?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7controlbar .s7fullscreenbutton[selected='false'][state='disabled'] { background-image:url(/is/image/Scene7SharedAssets/FullScreenButton_disabled?scl=1&fmt=png-alpha); }
+
+/* IconEffect component*/
+.s7mixedmediaviewer .s7videoplayer .s7iconeffect {
+	width:80px;
+	height:80px;
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-image:url(/is/image/Scene7SharedAssets/IconEffect_play_up?scl=1&fmt=png-alpha);
+ }
+
+.s7mixedmediaviewer .s7videoplayer .s7iconeffect {background-image:url(/is/image/Scene7SharedAssets/IconEffect_play_up?scl=1&fmt=png-alpha); }
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+    .s7mixedmediaviewer.s7touchinput .s7videoplayer .s7iconeffect { background-image:url(/is/image/Scene7SharedAssets/IconEffect_play_up_touch_2x?scl=1&fmt=png-alpha); }
+}
+
+/* Caption component */
+.s7mixedmediaviewer .s7videoplayer .s7caption {
+	background-color: rgba(0,0,0,0.75);
+	color: #e6e6e6;
+	font-weight: normal;
+	font-size: 14px;
+	font-family: Arial,Helvetica,sans-serif;
+}
+/* ClosedCaptionButton - common styles */
+.s7mixedmediaviewer .s7controlbar .s7closedcaptionbutton {
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position:center;
+	top:4px;
+	right:68px;
+	width:28px;
+	height:28px;	
+}
+
+/* ClosedCaptionButton - desktop size and art */
+.s7mixedmediaviewer .s7controlbar .s7closedcaptionbutton[selected='true'][state='up'] { background-image:url(/is/image/Scene7SharedAssets/ClosedCaptionButton_up?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7controlbar .s7closedcaptionbutton[selected='true'][state='over'] { background-image:url(/is/image/Scene7SharedAssets/ClosedCaptionButton_over?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7controlbar .s7closedcaptionbutton[selected='true'][state='down'] { background-image:url(/is/image/Scene7SharedAssets/ClosedCaptionButton_down?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7controlbar .s7closedcaptionbutton[selected='true'][state='disabled'] { background-image:url(/is/image/Scene7SharedAssets/ClosedCaptionButton_disabled?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7controlbar .s7closedcaptionbutton[selected='false'][state='up'] { background-image:url(/is/image/Scene7SharedAssets/ClosedCaptionButton_disabled?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7controlbar .s7closedcaptionbutton[selected='false'][state='over'] { background-image:url(/is/image/Scene7SharedAssets/ClosedCaptionButton_over?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7controlbar .s7closedcaptionbutton[selected='false'][state='down'] { background-image:url(/is/image/Scene7SharedAssets/ClosedCaptionButton_down?scl=1&fmt=png-alpha); }
+.s7mixedmediaviewer .s7controlbar .s7closedcaptionbutton[selected='false'][state='disabled'] { background-image:url(/is/image/Scene7SharedAssets/ClosedCaptionButton_disabled?scl=1&fmt=png-alpha); }

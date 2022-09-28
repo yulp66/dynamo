@@ -1,0 +1,19 @@
+.band{
+	background: none;
+}
+#footer .cgv a{
+	color: #353535
+}
+#footer .creditCards li {
+    background-image: url("../img/creditCards.png");
+}
+#bottom {
+    clear: both;
+    margin: auto;
+    width: 1000px;
+    height: 60px;
+    background: url("../img/ft_bottom_tunnel.jpg") no-repeat center;
+    font-size: 0;
+    text-indent: -5000px;
+    display: none;
+}

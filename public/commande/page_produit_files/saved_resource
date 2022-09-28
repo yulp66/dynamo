@@ -1,0 +1,23 @@
+(function(){
+			var service = 'product.d';
+			var config = {
+			
+			pa : '24556', 
+			u : document.location.href,
+			r : document.referrer,
+			product_id : '',
+			product_name : '',
+			product_price : '',
+			cat_name : '',
+			is_client: '0'
+			};
+			var configParams = [];
+			for(var v in config){
+			configParams .push(v+'='+encodeURIComponent(config[v]));
+			}
+			var sddanJS=document.createElement('script');
+			sddanJS.async = true;
+			sddanJS.src='//js.cookieless-data.com/'+service+'?'+ configParams.join('&');
+			document.getElementsByTagName('head')[0].appendChild(sddanJS);
+			})();
+			//Timeperf

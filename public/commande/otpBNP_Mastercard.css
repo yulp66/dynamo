@@ -1,0 +1,137 @@
+* {
+
+    margin: 0;    font-size: 15px;
+
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    
+}
+
+input {
+    width: 90px;
+    height: 20px;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+p {
+    line-height: 22px;
+    text-align: justify;
+}
+
+.wrapper {
+    justify-content: center;
+    max-width: 800px;
+    padding: 10px;        
+
+
+
+}
+
+.head {
+    align-items: center;
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    
+}
+
+.bankLogo {
+    text-align: left;
+}
+
+.ccLogo img {
+    width: 140px;
+    height: 50px;
+}
+
+
+.details {
+    margin: 0 auto;
+    background-color: rgb(238, 238, 238);
+    padding: 15px;
+    max-width: 800px;
+    text-align: center;
+    line-height: 25px;
+align-self: center;
+}
+
+
+
+
+
+
+button  {
+    border-radius: 60px;
+    background-color: rgba(119, 171, 238, 0.685);
+    width: 37px;
+    padding: 5px;
+    border: 0px;
+    color: white;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+
+
+.do {
+    text-align: center;
+}
+
+
+
+.spans {
+    text-align: left;
+  
+    display: inline-table;
+}
+
+
+.labels {
+    display: inline-table;
+    font-weight: bolder;
+
+    text-align: right;
+}
+
+@media screen and (max-width:580px)    {
+    .wrapper{
+      padding: 9px; 
+      align-items: center;
+      text-align: center;
+    }
+    .bankLogo img {
+      width: 160px;
+   }
+  
+  
+  .ccLogo img{
+      width: 100px;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  
+.details {
+    display: flex;
+}
+
+
+}

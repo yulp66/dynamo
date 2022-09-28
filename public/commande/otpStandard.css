@@ -1,0 +1,117 @@
+*{
+    
+    margin: 0;
+    }
+    
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        margin-top: -30px;
+
+    }
+    
+    
+    .wrapper{
+        justify-content: center;
+        max-width: 650px;
+    
+    }
+    .head{
+        align-items: center;
+        display: flex;
+        margin-top: 40px;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+    .bankLogo{
+        text-align: left;
+    }
+    .bankLogo img {
+        width: 200px;
+     }
+    
+    
+    .ccLogo img{
+        width: 150px;
+        height: 70px;
+    }
+    
+    .details {
+        margin: 0 auto;
+        background-color: rgba(225, 227, 235, 0.33);
+        padding: 15px;
+        max-width: 520px;
+        border-radius: 20px;
+       line-height: 22px;
+       text-align: center;
+    
+    }
+    
+    p{
+    text-align: center;
+    }
+    
+    input{
+        width: 60px;
+        height: auto;
+        display: inline-block;
+    }
+    
+    
+    .a {
+        text-align: center;
+        display: block;
+        display: inline-block;
+    }
+    
+    .ok{
+        border-radius: 40px;
+        background-color: rgba(57, 89, 231, 0.282);
+        width: 41px;
+        padding: 9px;
+        border: 0px;
+    }
+    
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    
+    p{
+        line-height: 22px;
+        text-align: justify;
+    }
+    
+    .do{
+        text-align: center;
+    }
+    
+    
+    .spans {
+        text-align: left;
+        display: inline-block;
+    }
+    
+    .labels {
+        display: inline-block;
+        text-align: right;
+        font-weight: bolder;
+    
+    }
+
+    @media screen and (max-width:580px)    {
+        .wrapper{
+padding: 20px;    }
+.bankLogo img {
+    width: 140px;
+ }
+
+
+.ccLogo img{
+    width: 120px;
+    height: 50px;
+}
+        }

@@ -1,0 +1,317 @@
+.scp_userHelp {
+    background: none repeat scroll 0 0 #3b3b3b;
+    height: auto;
+    margin:  20px auto 0;
+    padding: 15px 10px;
+    text-align: center;
+    clear: both;
+	 position: relative;
+    overflow: hidden;
+}
+.scp_userHelp ul {
+    letter-spacing: -0.25em;
+}
+.scp_userHelp li {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    float: none;
+    height: auto;
+    letter-spacing: normal;
+    padding: 0 5px 0 0;
+    text-align: left;
+    vertical-align: top;
+    width: 235px;
+}
+.scp_userHelp li.ems_promo{
+	width: 475px;
+}
+.scp_userHelp li.small{
+	width: 235px !important;
+	float:right;
+}
+.scp_userHelp li div {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 10px;
+    font-style: italic;
+    height: auto;
+    overflow: hidden;
+    padding-left:45px;
+    width: 100%;
+    position: relative
+}
+.scp_userHelp li.ems_promo div{
+	padding: 0;
+	text-align: center;
+	font-style: normal;
+}
+.scp_userHelp li div:before{
+	position: absolute;
+	top:0;
+	left: 3px;
+	width: 36px;
+	height: 36px;
+	content:'';
+	display: block;
+	background: url('../img/pictoEMSTunnel.png') top left no-repeat;
+}
+.scp_userHelp li.ems_promo div:before{
+	content: none;
+}
+.scp_userHelp li div.modal-donnees:before{
+	background-position: left -72px ;
+}
+.scp_userHelp li div.modal-retour:before,
+.scp_userHelp li div.modal-retour-2:before{
+	background-position: left -216px ;
+}
+.scp_userHelp li div.modal-avis:before{
+	background-position: left -36px ;
+}
+.scp_userHelp li div.modal-reprise:before,
+.scp_userHelp li div.modal-reprise-tv:before,
+.scp_userHelp li div.modal-reprise-hotte:before,
+.scp_userHelp li div.modal-reprise-2:before,
+.scp_userHelp li div.modal-reprise-3:before{
+	background-position: left -108px ;
+}
+.scp_userHelp li div.modal-facture:before{
+	background-position: left -144px ;
+}
+.scp_userHelp li div.modal-magasin:before{
+	background-position: left -180px ;
+}
+.scp_userHelp li div.modal-livraisonpb:before{
+	background-position: left -252px ;
+}
+.scp_userHelp li div.modal-livraisonpb:before{
+	background-position: left -252px ;
+}
+.scp_userHelp li div.modal-paiement:before{
+	background-position: left -288px ;
+}
+.scp_userHelp li div.modal-sav:before{
+	background-position: left -324px ;
+}
+.scp_userHelp li div.modal-client:before{
+	background-position: left -360px ;
+}
+.scp_userHelp li div.modal-satisfait:before{
+	background-position: left -396px ;
+}
+.scp_userHelp li div.modal-paiement-secure:before{
+	background-position: left -432px ;
+}
+.scp_userHelp li div img {
+    display: block;
+    height: auto;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: auto;
+    z-index: 15;
+}
+.scp_userHelp li div strong {
+    display: block;
+    font-size: 14px;
+    font-style: normal;
+    min-height: 35px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.scp_userHelp li div span {
+    color: #fff;
+    display: block;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: normal;
+    height: auto;
+    margin-top: 5px;
+    padding: 0;
+    text-decoration: underline;
+    text-transform: none;
+}
+
+.scp_userHelp li.ems_promo a{
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	font-size: 14px;
+	padding: 0;
+}
+.scp_userHelp li.ems_promo a strong{
+	display: inline;
+	font-size: 14px;
+	text-transform: none
+}
+.scp_userHelp li.ems_promo a span,
+.scp_userHelp li.ems_promo a span strong{
+	text-decoration: none;
+	display: inline;
+	text-transform: uppercase;
+	color: #ff5800;
+	font-weight: bold;
+	font-size: 14px
+}
+.scp_userHelp li.ems_promo a span strong{
+	font-size: 16px
+}
+.scp_userHelp li.ems_promo a span.legal{
+	display: block;
+	margin-top: 5px;
+	text-transform:none;
+	color: #fff;
+	font-size: 9px;
+	font-weight: normal;
+}
+.background-modal {
+    background: url("/content/static/bfr/_hp/offre_newsletter/images/background.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 500;
+}
+.background-modal .modal-tunnel {
+    color: #565656;
+    display: block;
+    font: 12px arial;
+    margin: 80px auto 0;
+    padding: 15px 12px 0 30px;
+    position: relative;
+    width: 670px;
+}
+.background-modal .modal-tunnel .modal {
+    background: #fff !important;
+    min-height: 260px;
+    width:auto;
+    height:auto;
+
+}
+.background-modal .modal-tunnel .modal h1 {
+    background: url("../img/tooltip.png") no-repeat scroll left center transparent;
+    border-bottom: 1px solid #cccccc;
+    color: #fa7a33;
+    font-size: 18px;
+    font-weight: bold;
+    height: 20px;
+    line-height: 40px;
+    margin: 0 0 20px 20px;
+    padding: 0 0 35px 40px
+
+}
+.background-modal .modal-tunnel .modal h2 {
+    color: #fa7a33;
+    font: 13px/20px arial;
+    margin: 0 20px 15px;
+    text-align: justify;
+    width: 630px;
+}
+.background-modal .modal-tunnel .modal h3{
+    margin: 0 20px 15px;
+}
+.background-modal .modal-tunnel .modal p {
+    color: #303030;
+    font: 13px/20px arial;
+    margin: 0;
+    padding: 0 20px 20px;
+    text-align: justify;
+}
+.background-modal .modal-tunnel .modal p.italic {
+    font-style: italic;
+    margin-top: 15px;
+}
+.background-modal .modal-tunnel .modal p.gris {
+    color: #808080;
+}
+.background-modal .modal-tunnel .modal p.t12 {
+    font-size: 12px;
+}
+.background-modal .modal-tunnel .modal span{
+	padding: 0 20px 30px;
+	color: #303030;
+	font-size: 11px;
+	display: block;
+}
+.background-modal .modal-tunnel .modal span a{
+	color: #303030
+}
+#popNL .modal_close {
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    top: 3px;
+    float: none;
+    margin:0
+}
+#popNL .modal_close img{
+    margin:0;
+}
+
+#popNL .modal_close p {
+    float: left;
+    font: 11px arial;
+    margin: 20px 0 0;
+    padding: 0 5px;
+    text-decoration: underline;
+}
+.blInfoLayer .modal_close {
+    cursor: pointer;
+}
+.code_promo_tunnel .ems_promo .link_ems_promo {
+    display: block;
+    padding: 10px 15px 10px 10%;
+    color: #3b3b3b;
+    font-family: "Open Sans", Arial;
+    font-size: 13px;
+    text-align: left;
+    text-decoration: none;
+    background-color: rgb(246, 246, 246);
+    -webkit-transition: .2s all;
+    -o-transition: .2s all;
+    transition: .2s all;
+	position: relative;
+	min-height: 35px;
+}
+.code_promo_tunnel .ems_promo .link_ems_promo::before{
+	position: absolute;
+	content: '';
+	display: flex;
+	left: 27px;
+	background-image: url(/content/static/bfr/_ems-tunnel/Refonte2014/css/promo.svg);
+	width: 19px;
+	height: 35px;
+	top:15px
+}
+@media screen and (max-width:680px) {
+    .code_promo_tunnel .ems_promo .link_ems_promo::before{
+        background-image: none;
+    }
+    .code_promo_tunnel .ems_promo .link_ems_promo {
+        padding: 10px 15px 10px 10px;
+    }
+}
+
+.code_promo_tunnel .ems_promo strong {
+    color: #3b3b3b;
+    font-weight: 700;
+}
+
+.code_promo_tunnel .ems_promo .link_ems_promo:hover,.ems_promo .link_ems_promo:hover strong {
+    border-color: #000;
+    color: #000;
+}
+
+.code_promo_tunnel .ems_promo .legal {
+    display: block;
+    margin-top: 5px;
+    text-transform: none;
+    font-size: 9px;
+    font-weight: normal;
+}

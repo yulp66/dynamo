@@ -1,0 +1,101 @@
+*{
+    
+    margin: 0;
+    }
+    
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    p{
+        text-align: center;
+        }
+        
+        input{
+            width: 100px;
+            height: auto;
+        }
+        a{
+            color: black;
+        }
+        
+    .wrapper{
+        justify-content: center;
+        max-width: 750px;
+        
+    
+    }
+    .button{
+        text-align: center;  
+    }
+
+    .head{
+        align-items: center;
+        display: flex;
+        margin-top: 40px;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+    .bankLogo{
+        text-align: left;
+    }
+    .bankLogo img {
+        width: 150px;
+    }
+    
+    
+    .ccLogo img{
+        width: 150px;
+        height: 65px;
+    }
+
+    .labels{
+       display: inline-block;
+       text-align: right;
+       position: sticky;
+       font-weight: bolder;
+
+    }
+    .details{
+
+        padding: 15px;
+        max-width: 850px;
+        text-align: center;
+        line-height: 23px;
+    }
+
+    @media screen and (max-width:580px)    {
+        .wrapper{
+padding: 40px;    }
+
+        }
+
+
+  
+    
+    
+    .a {
+        text-align: center;
+        display: block;
+        display: inline-block;
+    }
+    
+    .ok{
+        width: 82px;
+        height: 30px;
+        padding: 6px;
+        background-color: rgba(0, 0, 0, 0.952);
+        border: none;
+        color: white;
+        font-weight: bolder;
+cursor: pointer; 
+}
+    
+   
+
+.spans{
+    text-align: left;
+    display: inline-block;
+}
